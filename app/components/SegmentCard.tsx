@@ -6,13 +6,11 @@ export default function SegmentCard({
   href,
   image = "/next.svg",
   description,
-  productCount,
 }: {
   title: string;
   href: string;
   image?: string;
   description?: string;
-  productCount?: number;
 }) {
   return (
     <Link
@@ -21,13 +19,6 @@ export default function SegmentCard({
     >
       <div className="relative h-44 w-full">
         <Image src={image} alt={title} fill style={{ objectFit: "cover" }} />
-        {productCount && (
-          <div className="absolute top-3 right-3">
-            <span className="inline-flex items-center rounded-full bg-accent/90 px-2.5 py-1 text-xs font-medium text-primary">
-              {productCount} Product{productCount !== 1 ? "s" : ""}
-            </span>
-          </div>
-        )}
       </div>
       <div className="p-4">
         <h3 className="text-lg font-semibold text-text-primary group-hover:text-accent transition-colors mb-2">

@@ -10,7 +10,6 @@ export default function ProductsPage() {
       image: "/images/categories/menswear.jpg",
       summary:
         "Stylish and comfortable apparel designed for performance, confidence, and everyday wear.",
-      subcategoriesCount: 16,
     },
     {
       id: "womenswear",
@@ -19,7 +18,6 @@ export default function ProductsPage() {
       image: "/images/categories/womenswear.jpg",
       summary:
         "Elegant, versatile, and comfortable styles crafted to celebrate modern femininity.",
-      subcategoriesCount: 9,
     },
     {
       id: "kidswear",
@@ -28,7 +26,6 @@ export default function ProductsPage() {
       image: "/images/categories/kidswear.jpg",
       summary:
         "Soft, playful, and durable kidswear built for comfort, movement, and style.",
-      subcategoriesCount: 8,
     },
     {
       id: "polo-tees",
@@ -37,7 +34,6 @@ export default function ProductsPage() {
       image: "/images/categories/polo-tees.jpg",
       summary:
         "Classic Polo T-shirts combining comfort and elegance — perfect for corporates, teams, and casual wear.",
-      subcategoriesCount: 4,
     },
     {
       id: "custom-logo-tees",
@@ -46,7 +42,6 @@ export default function ProductsPage() {
       image: "/images/categories/custom-logo-tees.jpg",
       summary:
         "Create personalized T-shirts with custom logo prints, embroidery, or screen printing — perfect for brands and events.",
-      subcategoriesCount: 4,
     },
   ];
 
@@ -80,11 +75,6 @@ export default function ProductsPage() {
                   className="group-hover:scale-110 transition-transform duration-300 opacity-80"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/20 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <span className="inline-flex items-center rounded-full bg-accent/90 px-3 py-1 text-sm font-medium text-primary">
-                    {category.subcategoriesCount} Products
-                  </span>
-                </div>
               </div>
 
               <div className="p-6">

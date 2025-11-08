@@ -67,7 +67,6 @@ export default function CategoryGrid() {
             href={`/products/${c.slug}`}
             image={c.image}
             description={c.description}
-            productCount={c.productCount}
           />
         ))}
       </div>
