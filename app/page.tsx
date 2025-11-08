@@ -108,9 +108,9 @@ export default function Home() {
                 Our Product Range
               </h2>
               <p className="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">
-                From school uniforms to corporate apparel, Layered Luxe delivers
-                unmatched craftsmanship and comfort across a variety of product
-                categories.
+                From school uniforms to corporate apparel, sportswear to
+                winterwear - Layered Luxe delivers unmatched craftsmanship and
+                comfort across 8 specialized categories designed for every need.
               </p>
             </div>
             <CategoryGrid />
@@ -258,8 +258,8 @@ export default function Home() {
                 <div className="text-text-secondary">Happy Clients</div>
               </div>
               <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
-                <div className="text-4xl font-bold mb-2 text-accent">50+</div>
-                <div className="text-text-secondary">Product Types</div>
+                <div className="text-4xl font-bold mb-2 text-accent">8</div>
+                <div className="text-text-secondary">Product Categories</div>
               </div>
               <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
                 <div className="text-4xl font-bold mb-2 text-accent">10+</div>

@@ -110,8 +110,8 @@ export default function Navigation() {
             onClick={closeSidebar}
           ></div>
 
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-surface shadow-2xl">
-            <div className="flex items-center justify-between p-6 border-b border-secondary">
+          <div className="fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-surface shadow-2xl flex flex-col">
+            <div className="flex items-center justify-between p-6 border-b border-secondary shrink-0">
               <div className="flex items-center space-x-3">
                 <div className="h-10 w-10 rounded-xl bg-accent flex items-center justify-center">
                   <span className="text-lg font-bold text-primary">LL</span>
@@ -146,17 +146,18 @@ export default function Navigation() {
               </button>
             </div>
 
-            <nav className="px-6 py-8 space-y-2">
+            {/* Scrollable Navigation */}
+            <div className="flex-1 overflow-y-auto px-6 py-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={closeSidebar}
-                  className="group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-text-secondary hover:bg-background hover:text-text-primary"
+                  className="group flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-text-secondary hover:bg-background hover:text-text-primary transition-colors mb-2"
                 >
                   <span>{item.name}</span>
                   <svg
-                    className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100"
+                    className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -170,17 +171,18 @@ export default function Navigation() {
                   </svg>
                 </Link>
               ))}
+            </div>
 
-              <div className="pt-6">
-                <Link
-                  href="/contact"
-                  className="flex items-center justify-center px-4 py-4 rounded-xl bg-accent text-primary font-semibold hover:bg-accent/90"
-                  onClick={closeSidebar}
-                >
-                  Contact
-                </Link>
-              </div>
-            </nav>
+            {/* Fixed Contact Button at Bottom */}
+            <div className="p-6 border-t border-secondary shrink-0">
+              <Link
+                href="/contact"
+                className="flex items-center justify-center w-full px-4 py-4 rounded-xl bg-accent text-primary font-semibold hover:bg-accent/90 transition-colors"
+                onClick={closeSidebar}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       )}
