@@ -37,7 +37,7 @@ export default function AboutPage() {
                   <li className="flex items-start space-x-3">
                     <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0 mt-0.5">
                       <svg
-                        className="h-3 w-3 text-white"
+                        className="h-3 w-3 text-primary"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -55,7 +55,7 @@ export default function AboutPage() {
                   <li className="flex items-start space-x-3">
                     <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0 mt-0.5">
                       <svg
-                        className="h-3 w-3 text-white"
+                        className="h-3 w-3 text-primary"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -71,7 +71,7 @@ export default function AboutPage() {
                   <li className="flex items-start space-x-3">
                     <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0 mt-0.5">
                       <svg
-                        className="h-3 w-3 text-white"
+                        className="h-3 w-3 text-primary"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -87,7 +87,7 @@ export default function AboutPage() {
                   <li className="flex items-start space-x-3">
                     <div className="h-6 w-6 rounded-full bg-accent flex items-center justify-center shrink-0 mt-0.5">
                       <svg
-                        className="h-3 w-3 text-white"
+                        className="h-3 w-3 text-primary"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >

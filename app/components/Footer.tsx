@@ -2,22 +2,22 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
+    <footer className="border-t border-accent/20 bg-surface">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold text-slate-900">
+            <h3 className="text-lg font-semibold text-text-primary">
               Layered Luxe
             </h3>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-text-secondary">
               Complete uniform solutions for schools, colleges, corporates, and
               sports teams across India.
             </p>
             <div className="mt-4">
               <a
                 href="/catalogue.pdf"
-                className="inline-flex items-center text-sm font-medium text-slate-900 hover:text-slate-700"
+                className="inline-flex items-center text-sm font-medium text-text-primary hover:text-accent"
                 download
               >
                 Download Catalogue →
@@ -27,14 +27,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-text-primary">
               Quick Links
             </h4>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   About Us
                 </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/products"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Products
                 </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/customisation"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Customisation
                 </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/quality"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Quality & Fabric
                 </Link>
@@ -68,14 +68,14 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-text-primary">
               Categories
             </h4>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link
                   href="/products/school"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   School Uniforms
                 </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/products/college"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   College Uniforms
                 </Link>
@@ -91,7 +91,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/products/corporate"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Corporate Wear
                 </Link>
@@ -99,7 +99,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/products/sports"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Sportswear
                 </Link>
@@ -109,14 +109,14 @@ export default function Footer() {
 
           {/* Contact & Resources */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-text-primary">
               Resources
             </h4>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link
                   href="/testimonials#portfolio"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Portfolio
                 </Link>
@@ -124,7 +124,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/testimonials"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Testimonials
                 </Link>
@@ -132,7 +132,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Blog
                 </Link>
@@ -140,7 +140,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-slate-600 hover:text-slate-900"
+                  className="text-sm text-text-secondary hover:text-text-primary"
                 >
                   Contact Us
                 </Link>
@@ -149,29 +149,29 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-slate-200 pt-8">
+        <div className="mt-8 border-t border-accent/20 pt-8">
           <div className="flex flex-col items-center justify-between md:flex-row">
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-text-secondary">
               © 2025 Layered Luxe. All rights reserved. Made in India.
             </p>
             <div className="mt-4 flex space-x-6 md:mt-0">
               <a
                 href="/contact"
-                className="text-sm text-slate-500 hover:text-slate-900"
+                className="text-sm text-text-secondary hover:text-text-primary"
               >
                 Get a Quote
               </a>
-              <span className="text-slate-300">|</span>
+              <span className="text-text-secondary/50">|</span>
               <a
                 href="tel:+91-XXXXXXXXXX"
-                className="text-sm text-slate-500 hover:text-slate-900"
+                className="text-sm text-text-secondary hover:text-text-primary"
               >
                 +91-XXXXXXXXXX
               </a>
-              <span className="text-slate-300">|</span>
+              <span className="text-text-secondary/50">|</span>
               <a
                 href="mailto:info@layeredluxe.com"
-                className="text-sm text-slate-500 hover:text-slate-900"
+                className="text-sm text-text-secondary hover:text-text-primary"
               >
                 info@layeredluxe.com
               </a>

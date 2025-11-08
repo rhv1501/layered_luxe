@@ -1,8 +1,55 @@
 import Link from "next/link";
-import { categories } from "../../data/categories";
 import Image from "next/image";
 
 export default function ProductsPage() {
+  const categories = [
+    {
+      id: "menswear",
+      title: "Men's Wear",
+      slug: "menswear",
+      image: "/images/categories/menswear.jpg",
+      summary:
+        "Stylish and comfortable apparel designed for performance, confidence, and everyday wear.",
+      subcategoriesCount: 16,
+    },
+    {
+      id: "womenswear",
+      title: "Women's Wear",
+      slug: "womenswear",
+      image: "/images/categories/womenswear.jpg",
+      summary:
+        "Elegant, versatile, and comfortable styles crafted to celebrate modern femininity.",
+      subcategoriesCount: 9,
+    },
+    {
+      id: "kidswear",
+      title: "Kids' Wear",
+      slug: "kidswear",
+      image: "/images/categories/kidswear.jpg",
+      summary:
+        "Soft, playful, and durable kidswear built for comfort, movement, and style.",
+      subcategoriesCount: 8,
+    },
+    {
+      id: "polo-tees",
+      title: "Polo Tees",
+      slug: "polo-tees",
+      image: "/images/categories/polo-tees.jpg",
+      summary:
+        "Classic Polo T-shirts combining comfort and elegance — perfect for corporates, teams, and casual wear.",
+      subcategoriesCount: 4,
+    },
+    {
+      id: "custom-logo-tees",
+      title: "Custom Logo Tees",
+      slug: "custom-logo-tees",
+      image: "/images/categories/custom-logo-tees.jpg",
+      summary:
+        "Create personalized T-shirts with custom logo prints, embroidery, or screen printing — perfect for brands and events.",
+      subcategoriesCount: 4,
+    },
+  ];
+
   return (
     <div className="bg-background min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-32 pb-20">
@@ -10,29 +57,34 @@ export default function ProductsPage() {
           <h1 className="font-heading text-4xl font-bold text-text-primary lg:text-5xl">
             Our Product Categories
           </h1>
-          <p className="mt-4 text-xl text-text-secondary max-w-3xl mx-auto">
-            Discover our comprehensive range of premium uniforms, sportswear,
-            and corporate apparel. Each category is designed to meet specific
-            industry needs with quality fabrics and professional craftsmanship.
+          <p className="mt-4 text-xl text-text-secondary max-w-4xl mx-auto">
+            Showcase all Layered Luxe product categories across Menswear,
+            Womenswear, and Kidswear, with premium quality and style for every
+            occasion.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-20">
           {categories.map((category) => (
             <Link
               key={category.id}
               href={`/products/${category.slug}`}
-              className="group bg-surface border border-accent/20 rounded-3xl overflow-hidden hover:shadow-lg hover:border-accent/40 transition-all duration-300"
+              className="group bg-surface border border-accent/20 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-accent/40 transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="aspect-[4/3] relative overflow-hidden bg-secondary">
+              <div className="aspect-4/3 relative overflow-hidden bg-secondary">
                 <Image
-                  src={category.image || "/window.svg"}
+                  src={category.image}
                   alt={category.title}
                   fill
                   style={{ objectFit: "cover" }}
-                  className="group-hover:scale-105 transition-transform duration-300 opacity-80"
+                  className="group-hover:scale-110 transition-transform duration-300 opacity-80"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/20 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="inline-flex items-center rounded-full bg-accent/90 px-3 py-1 text-sm font-medium text-primary">
+                    {category.subcategoriesCount} Products
+                  </span>
+                </div>
               </div>
 
               <div className="p-6">
@@ -40,33 +92,15 @@ export default function ProductsPage() {
                   {category.title}
                 </h3>
                 <p className="text-sm text-text-secondary leading-relaxed mb-4">
-                  {category.description}
+                  {category.summary}
                 </p>
-
-                {category.products && category.products.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {category.products.slice(0, 3).map((product) => (
-                      <span
-                        key={product.id}
-                        className="inline-flex items-center rounded-full bg-accent/20 px-2 py-1 text-xs font-medium text-accent"
-                      >
-                        {product.title}
-                      </span>
-                    ))}
-                    {category.products.length > 3 && (
-                      <span className="inline-flex items-center rounded-full bg-accent/20 px-2 py-1 text-xs font-medium text-accent">
-                        +{category.products.length - 3} more
-                      </span>
-                    )}
-                  </div>
-                )}
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-accent">
-                    {category.products?.length || 0} Products
+                    View Products
                   </span>
                   <svg
-                    className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"
+                    className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -84,119 +118,44 @@ export default function ProductsPage() {
           ))}
         </div>
 
-        {/* Featured Categories Section */}
-        <section className="mt-20 bg-surface rounded-3xl p-12 border border-accent/20">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl font-bold text-text-primary lg:text-4xl">
-              Why Choose Our Products?
-            </h2>
-            <p className="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
-              Quality craftsmanship meets modern design in every piece we create
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-accent"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-heading text-xl font-semibold text-text-primary mb-3">
-                Premium Quality
-              </h3>
-              <p className="text-text-secondary">
-                Only the finest fabrics and materials sourced from trusted
-                manufacturers across India
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-accent"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-heading text-xl font-semibold text-text-primary mb-3">
-                Custom Design
-              </h3>
-              <p className="text-text-secondary">
-                Personalized designs, logos, and colors to perfectly represent
-                your brand identity
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-accent"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-heading text-xl font-semibold text-text-primary mb-3">
-                Fast Delivery
-              </h3>
-              <p className="text-text-secondary">
-                Quick turnaround times without compromising quality, delivered
-                anywhere in India
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="mt-20 text-center">
-          <div className="bg-accent rounded-3xl p-12 border border-accent/50">
-            <h2 className="font-heading text-3xl font-bold text-primary lg:text-4xl mb-4">
-              Ready to Order Your Uniforms?
-            </h2>
-            <p className="text-lg text-primary/80 max-w-2xl mx-auto mb-8">
-              Get a custom quote for your organization. We&apos;ll help you
-              choose the perfect products and customize them to match your brand
-              perfectly.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <section className="text-center">
+          <div className="bg-linear-to-br from-accent via-accent to-accent/80 rounded-3xl p-12 lg:p-16 relative overflow-hidden">
+            <div className="relative z-10">
+              <h2 className="font-heading text-4xl font-bold text-primary lg:text-5xl mb-6">
+                Design Your Collection with Layered Luxe
+              </h2>
+              <p className="text-xl text-primary/90 max-w-3xl mx-auto mb-10 leading-relaxed">
+                From premium basics to fully customized apparel — explore our
+                complete product range built for quality, comfort, and
+                performance.
+              </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-primary px-8 py-4 text-base font-semibold text-text-primary hover:bg-surface transition-all shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center rounded-2xl bg-primary px-10 py-5 text-lg font-semibold text-text-primary hover:bg-surface transition-all shadow-xl hover:shadow-2xl hover:scale-105"
               >
-                Get Your Quote
+                Get in Touch
+                <svg
+                  className="ml-2 w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
               </Link>
-              <Link
-                href="/customisation"
-                className="inline-flex items-center justify-center rounded-2xl border-2 border-primary px-8 py-4 text-base font-semibold text-primary hover:bg-primary hover:text-text-primary transition-all"
-              >
-                View Customization Options
-              </Link>
+            </div>
+
+            {/* Background Decoration */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-10 left-10 w-20 h-20 border border-primary rounded-full"></div>
+              <div className="absolute bottom-10 right-10 w-16 h-16 border border-primary rounded-full"></div>
+              <div className="absolute top-1/2 left-1/4 w-12 h-12 border border-primary rounded-full"></div>
             </div>
           </div>
         </section>

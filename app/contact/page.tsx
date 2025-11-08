@@ -24,7 +24,7 @@ export default function ContactPage() {
                 <li className="flex items-center space-x-3">
                   <div className="h-5 w-5 rounded-full bg-accent flex items-center justify-center">
                     <svg
-                      className="h-3 w-3 text-white"
+                      className="h-3 w-3 text-primary"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -40,7 +40,7 @@ export default function ContactPage() {
                 <li className="flex items-center space-x-3">
                   <div className="h-5 w-5 rounded-full bg-accent flex items-center justify-center">
                     <svg
-                      className="h-3 w-3 text-white"
+                      className="h-3 w-3 text-primary"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 <li className="flex items-center space-x-3">
                   <div className="h-5 w-5 rounded-full bg-accent flex items-center justify-center">
                     <svg
-                      className="h-3 w-3 text-white"
+                      className="h-3 w-3 text-primary"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 <li className="flex items-center space-x-3">
                   <div className="h-5 w-5 rounded-full bg-accent flex items-center justify-center">
                     <svg
-                      className="h-3 w-3 text-white"
+                      className="h-3 w-3 text-primary"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >

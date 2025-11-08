@@ -20,16 +20,16 @@ export default function Stepper({
               <div
                 className={`flex h-10 w-10 items-center justify-center rounded-full border text-sm font-medium ${
                   isDone
-                    ? "bg-slate-900 text-white"
+                    ? "bg-accent text-primary"
                     : isActive
-                    ? "border-slate-900 text-slate-900"
-                    : "border-slate-200 text-slate-600"
+                    ? "border-accent text-accent"
+                    : "border-text-secondary/30 text-text-secondary"
                 }`}
                 aria-current={isActive ? "step" : undefined}
               >
                 {idx}
               </div>
-              <div className="hidden min-w-[140px] text-sm text-slate-600 md:block">
+              <div className="hidden min-w-[140px] text-sm text-text-secondary md:block">
                 {s}
               </div>
             </li>

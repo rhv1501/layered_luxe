@@ -127,7 +127,7 @@ export default function Home() {
                 </h2>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-accent flex items-center justify-center">
+                    <div className="shrink-0 h-6 w-6 rounded-full bg-accent flex items-center justify-center">
                       <svg
                         className="h-3 w-3 text-primary"
                         fill="currentColor"
@@ -146,9 +146,9 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-accent flex items-center justify-center">
+                    <div className="shrink-0 h-6 w-6 rounded-full bg-accent flex items-center justify-center">
                       <svg
-                        className="h-3 w-3 text-white"
+                        className="h-3 w-3 text-primary"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -166,9 +166,9 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-accent flex items-center justify-center">
+                    <div className="shrink-0 h-6 w-6 rounded-full bg-accent flex items-center justify-center">
                       <svg
-                        className="h-3 w-3 text-white"
+                        className="h-3 w-3 text-primary"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -188,7 +188,7 @@ export default function Home() {
                 <div className="mt-8">
                   <Link
                     href="/customisation"
-                    className="inline-flex items-center rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800 transition-colors"
+                    className="inline-flex items-center rounded-2xl bg-accent px-6 py-3 text-sm font-semibold text-primary hover:bg-accent/90 transition-colors"
                   >
                     Learn More
                     <svg

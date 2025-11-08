@@ -13,14 +13,14 @@ export default function SegmentCard({
   return (
     <Link
       href={href}
-      className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md"
+      className="group block overflow-hidden rounded-lg border border-accent/20 bg-surface shadow-sm transition-shadow hover:shadow-md"
     >
       <div className="relative h-44 w-full">
         <Image src={image} alt={title} fill style={{ objectFit: "cover" }} />
       </div>
       <div className="p-4">
-        <h3 className="text-lg font-semibold !text-slate-900">{title}</h3>
-        <p className="mt-1 text-sm text-slate-600">
+        <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
+        <p className="mt-1 text-sm text-text-secondary">
           Explore {title.toLowerCase()}
         </p>
       </div>

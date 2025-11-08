@@ -9,6 +9,7 @@ export default function Navigation() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+    { name: "Uniforms", href: "/uniforms" },
     { name: "Products", href: "/products" },
     { name: "Fabrics", href: "/fabrics" },
     { name: "Quality", href: "/quality" },
@@ -105,7 +106,7 @@ export default function Navigation() {
       {isOpen && (
         <div className="fixed inset-0 z-60 lg:hidden">
           <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 bg-text-primary/50 backdrop-blur-sm"
             onClick={closeSidebar}
           ></div>
 
