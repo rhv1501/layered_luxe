@@ -23,7 +23,7 @@ export default function UniformsPage() {
       subtitle: "Corporate Attire",
       description:
         "Professional shirts, trousers, ties, and accessories for a polished corporate image.",
-      image: "/next.svg",
+      image: "/corporate.png",
       href: "/products/corporate",
     },
     {
@@ -32,7 +32,7 @@ export default function UniformsPage() {
       subtitle: "Healthcare Uniforms",
       description:
         "Comfortable scrubs, lab coats, and medical attire designed for functionality and professionalism.",
-      image: "/vercel.svg",
+      image: "/healthcareuniforms.png",
       href: "/products/healthcare",
     },
     {
@@ -41,7 +41,7 @@ export default function UniformsPage() {
       subtitle: "School Uniforms",
       description:
         "Durable and comfortable school uniforms that foster pride and unity among students.",
-      image: "/window.svg",
+      image: "/schooluniforms.png",
       href: "/products/school",
     },
     {
@@ -50,7 +50,7 @@ export default function UniformsPage() {
       subtitle: "Industrial Workwear",
       description:
         "Durable and safety-compliant workwear for manufacturing and industrial environments.",
-      image: "/globe.svg",
+      image: "/industrailuniforms.png",
       href: "/products/industrial",
     },
     {
@@ -59,7 +59,7 @@ export default function UniformsPage() {
       subtitle: "Hospitality Uniforms",
       description:
         "Elegant and practical uniforms for hotels, restaurants, and service industries.",
-      image: "/file.svg",
+      image: "/hospitality.png",
       href: "/products/hospitality",
     },
     {
@@ -68,7 +68,7 @@ export default function UniformsPage() {
       subtitle: "Uniform T Shirts",
       description:
         "Semi formal t-shirts for corporate events, team-building activities, and Friday casuals.",
-      image: "/next.svg",
+      image: "/tshirtuniforms.png",
       href: "/products/tshirts",
     },
   ];

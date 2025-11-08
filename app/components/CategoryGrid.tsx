@@ -6,7 +6,7 @@ export default function CategoryGrid() {
       id: "menswear",
       title: "Men's Wear",
       slug: "menswear",
-      image: "/next.svg",
+      image: "/menswear.png",
       description:
         "Stylish and comfortable apparel designed for performance, confidence, and everyday wear.",
       productCount: 16,

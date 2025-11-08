@@ -20,7 +20,7 @@ const ProductsGrid = dynamic(
           id: "menswear",
           title: "Men's Wear",
           slug: "menswear",
-          image: "/images/categories/menswear.jpg",
+          image: "/menswear.png",
           summary:
             "Stylish and comfortable apparel designed for performance, confidence, and everyday wear.",
         },
