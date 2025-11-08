@@ -1,34 +1,160 @@
 @import "tailwindcss";
 
 :root {
-  /* Light Theme Colors */
-  --color-primary: #ffffff;
-  --color-secondary: #f8f9fa;
-  --color-accent: #c49a6c;
-  --color-background: #ffffff;
-  --color-surface: #f8f9fa;
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #6b7280;
+  /* ===== LAYERED LUXE COLOR PALETTE ===== */
+
+  /* Primary Colors */
+  --color-primary: #0b2c57; /* Deep Navy Blue - Headers, primary text, main branding */
+  --color-secondary: #f8f9fa; /* Soft Gray (Neutral) - Backgrounds, sections, cards */
+  --color-accent: #f4a624; /* Golden Amber - CTAs, highlights, logo emphasis */
+
+  /* Supporting Colors */
+  --color-teal: #1e9db4; /* Teal Blue - Links, buttons, interactive elements */
+  --color-aqua: #3ccfc1; /* Aqua Green - Secondary accents, hover states */
+  --color-royal: #234d91; /* Royal Blue - Subheadings, icons, contrast text */
+
+  /* Base Colors */
+  --color-background: #ffffff; /* White - Main background, clean sections */
+  --color-surface: #f8f9fa; /* Soft Gray - Alternative background, cards */
+
+  /* Text Colors */
+  --color-text-primary: #0b2c57; /* Deep Navy Blue - Main text, headings */
+  --color-text-secondary: #234d91; /* Royal Blue - Secondary text, captions */
+  --color-text-muted: #6b7280; /* Gray - Muted text, placeholders */
+  --color-text-light: #9ca3af; /* Light Gray - Subtle text */
+
+  /* State Colors */
+  --color-success: #10b981; /* Green - Success states, confirmations */
+  --color-warning: #f59e0b; /* Orange - Warnings, attention */
+  --color-error: #ef4444; /* Red - Errors, alerts */
+  --color-info: #3b82f6; /* Blue - Information, notes */
+
+  /* Interactive States */
+  --color-hover-primary: #083a6b; /* Darker navy for primary hover */
+  --color-hover-accent: #e09f20; /* Darker amber for accent hover */
+  --color-hover-teal: #1a8ca0; /* Darker teal for interactive hover */
+  --color-hover-surface: #e5e7eb; /* Light gray for surface hover */
+
+  /* Border Colors */
+  --color-border-light: #e5e7eb; /* Light border for subtle divisions */
+  --color-border-medium: #d1d5db; /* Medium border for clear divisions */
+  --color-border-dark: #6b7280; /* Dark border for emphasis */
+  --color-border-accent: #f4a624; /* Accent border for highlights */
+
+  /* Shadow Colors */
+  --color-shadow-light: rgba(11, 44, 87, 0.05); /* Light shadow */
+  --color-shadow-medium: rgba(11, 44, 87, 0.1); /* Medium shadow */
+  --color-shadow-dark: rgba(11, 44, 87, 0.15); /* Dark shadow */
+  --color-shadow-colored: rgba(244, 166, 36, 0.15); /* Colored shadow */
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0b2c57 0%, #234d91 100%);
+  --gradient-accent: linear-gradient(135deg, #f4a624 0%, #e09f20 100%);
+  --gradient-cool: linear-gradient(135deg, #1e9db4 0%, #3ccfc1 100%);
+  --gradient-subtle: linear-gradient(135deg, #f8f9fa 0%, #e5e7eb 100%);
 
   /* Typography */
   --font-heading: var(--font-poppins);
   --font-body: var(--font-dm-sans);
 }
 
-@theme {
-  --color-primary: #ffffff;
+/* Tailwind Theme Extension */
+.theme-default {
+  --color-primary: #0b2c57;
   --color-secondary: #f8f9fa;
-  --color-accent: #c49a6c;
+  --color-accent: #f4a624;
+  --color-teal: #1e9db4;
+  --color-aqua: #3ccfc1;
+  --color-royal: #234d91;
   --color-background: #ffffff;
   --color-surface: #f8f9fa;
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #6b7280;
+  --color-text-primary: #0b2c57;
+  --color-text-secondary: #234d91;
 }
 
 body {
   background: var(--color-background);
   color: var(--color-text-primary);
   font-family: var(--font-body);
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.bg-teal {
+  background-color: var(--color-teal);
+}
+.bg-aqua {
+  background-color: var(--color-aqua);
+}
+.bg-royal {
+  background-color: var(--color-royal);
+}
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--color-text-primary);
+}
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+.text-muted {
+  color: var(--color-text-muted);
+}
+.text-light {
+  color: var(--color-text-light);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.text-teal {
+  color: var(--color-teal);
+}
+.text-aqua {
+  color: var(--color-aqua);
+}
+.text-royal {
+  color: var(--color-royal);
+}
+
+/* Border Colors */
+.border-light {
+  border-color: var(--color-border-light);
+}
+.border-medium {
+  border-color: var(--color-border-medium);
+}
+.border-dark {
+  border-color: var(--color-border-dark);
+}
+.border-accent {
+  border-color: var(--color-border-accent);
+}
+
+/* Gradients */
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+.gradient-accent {
+  background: var(--gradient-accent);
+}
+.gradient-cool {
+  background: var(--gradient-cool);
+}
+.gradient-subtle {
+  background: var(--gradient-subtle);
 }
 
 /* Remove excessive transitions */
@@ -114,7 +240,7 @@ body {
 
 .uniform-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(196, 154, 108, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(30, 157, 180, 0.25);
 }
 
 /* Heading styles */
@@ -135,7 +261,7 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f8f9fa;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -144,5 +270,5 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b68a4c;
+  background: var(--color-teal);
 }

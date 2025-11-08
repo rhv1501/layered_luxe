@@ -14,13 +14,16 @@ export default {
         'sans': ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
       },
       colors: {
-        primary: '#0e0e0e',
-        secondary: '#1a1a1a',
-        accent: '#c49a6c',
-        background: '#0e0e0e',
-        surface: '#1e1e1e',
-        'text-primary': '#f5f5f5',
-        'text-secondary': '#d1b17a',
+        primary: '#0B2C57',        // Deep Navy Blue
+        secondary: '#F8F9FA',      // Soft Gray (Neutral)
+        accent: '#F4A624',         // Golden Amber
+        teal: '#1E9DB4',          // Teal Blue
+        aqua: '#3CCFC1',          // Aqua Green
+        royal: '#234D91',         // Royal Blue
+        background: '#FFFFFF',     // White
+        surface: '#F8F9FA',       // Soft Gray (Neutral)
+        'text-primary': '#0B2C57',   // Deep Navy Blue
+        'text-secondary': '#234D91', // Royal Blue
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

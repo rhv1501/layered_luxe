@@ -3,6 +3,7 @@ import { Inter, Poppins, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import FloatingButtons from "./components/FloatingButtons";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <FloatingButtons />
       </body>
     </html>
   );

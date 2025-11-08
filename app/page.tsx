@@ -37,6 +37,30 @@ export default function Home() {
       <main>
         <Hero />
 
+        {/* Quality Section */}
+        <section className="py-20 bg-background border-t border-secondary">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
+                <div className="text-4xl font-bold mb-2 text-accent">500+</div>
+                <div className="text-text-secondary">Happy Clients</div>
+              </div>
+              <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
+                <div className="text-4xl font-bold mb-2 text-accent">8</div>
+                <div className="text-text-secondary">Product Categories</div>
+              </div>
+              <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
+                <div className="text-4xl font-bold mb-2 text-accent">5+</div>
+                <div className="text-text-secondary">Years Experience</div>
+              </div>
+              <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
+                <div className="text-4xl font-bold mb-2 text-accent">99%</div>
+                <div className="text-text-secondary">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Manufacture in India Section */}
         <section className="py-20 bg-surface">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -272,59 +296,6 @@ export default function Home() {
         <Suspense fallback={<SectionLoader />}>
           <TestimonialsSection />
         </Suspense>
-
-        {/* Quality Section */}
-        <section className="py-20 bg-background border-t border-secondary">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-            <h2 className="font-heading text-3xl font-semibold text-text-primary lg:text-4xl mb-6">
-              Quality You Can Feel
-            </h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto mb-12">
-              Every stitch reflects our commitment to quality, durability, and
-              design excellence. Experience the difference of truly premium
-              fabric.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
-                <div className="text-4xl font-bold mb-2 text-accent">500+</div>
-                <div className="text-text-secondary">Happy Clients</div>
-              </div>
-              <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
-                <div className="text-4xl font-bold mb-2 text-accent">8</div>
-                <div className="text-text-secondary">Product Categories</div>
-              </div>
-              <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
-                <div className="text-4xl font-bold mb-2 text-accent">10+</div>
-                <div className="text-text-secondary">Years Experience</div>
-              </div>
-              <div className="text-center p-6 rounded-2xl bg-surface border border-secondary">
-                <div className="text-4xl font-bold mb-2 text-accent">99%</div>
-                <div className="text-text-secondary">Client Satisfaction</div>
-              </div>
-            </div>
-            <div className="mt-12">
-              <Link
-                href="/quality"
-                className="inline-flex items-center rounded-2xl bg-accent px-6 py-3 text-sm font-semibold text-primary hover:bg-accent/90 transition-colors"
-              >
-                Explore Quality Standards
-                <svg
-                  className="ml-2 h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
     </div>
   );
