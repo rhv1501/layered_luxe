@@ -1,4 +1,18 @@
-import ContactForm from "../components/ContactForm";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import Loader from "../components/Loader";
+
+// Loading fallback component
+const FormLoader = () => (
+  <div className="flex justify-center py-8">
+    <Loader />
+  </div>
+);
+
+// Lazy load the contact form
+const ContactForm = dynamic(() => import("../components/ContactForm"), {
+  loading: () => <FormLoader />,
+});
 
 export default function ContactPage() {
   return (
@@ -137,7 +151,9 @@ export default function ContactPage() {
           </div>
 
           <div className="lg:col-span-2 order-1 lg:order-2">
-            <ContactForm />
+            <Suspense fallback={<FormLoader />}>
+              <ContactForm />
+            </Suspense>
           </div>
         </div>
       </div>

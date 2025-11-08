@@ -1,5 +1,19 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import Loader from "../components/Loader";
+
+// Loading fallback component
+const SectionLoader = () => (
+  <div className="flex justify-center py-8">
+    <Loader />
+  </div>
+);
+
+// Lazy load the uniforms grid
+const UniformsGrid = dynamic(() => import("../../components/UniformsGrid"), {
+  loading: () => <SectionLoader />,
+});
 
 export default function UniformsPage() {
   const uniformSolutions = [
@@ -74,37 +88,9 @@ export default function UniformsPage() {
         </div>
 
         {/* Uniform Solutions Grid */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-20">
-          {uniformSolutions.map((solution) => (
-            <div
-              key={solution.id}
-              className="group bg-surface border border-accent/20 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-accent/40 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="aspect-4/3 relative overflow-hidden bg-secondary">
-                <Image
-                  src={solution.image}
-                  alt={solution.title}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="group-hover:scale-110 transition-transform duration-300 opacity-80"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/20 to-transparent" />
-              </div>
-
-              <div className="p-6">
-                <h3 className="font-heading text-xl font-semibold text-text-primary group-hover:text-accent transition-colors mb-2">
-                  {solution.title}
-                </h3>
-                <h4 className="text-sm font-medium text-accent mb-3">
-                  {solution.subtitle}
-                </h4>
-                <p className="text-sm text-text-secondary leading-relaxed">
-                  {solution.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Suspense fallback={<SectionLoader />}>
+          <UniformsGrid uniformSolutions={uniformSolutions} />
+        </Suspense>
 
         {/* Contact CTA */}
         <div className="text-center mb-20">

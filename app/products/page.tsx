@@ -1,64 +1,64 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import Loader from "../components/Loader";
 
-export default function ProductsPage() {
-  const categories = [
-    {
-      id: "menswear",
-      title: "Men's Wear",
-      slug: "menswear",
-      image: "/images/categories/menswear.jpg",
-      summary:
-        "Stylish and comfortable apparel designed for performance, confidence, and everyday wear.",
-    },
-    {
-      id: "womenswear",
-      title: "Women's Wear",
-      slug: "womenswear",
-      image: "/images/categories/womenswear.jpg",
-      summary:
-        "Elegant, versatile, and comfortable styles crafted to celebrate modern femininity.",
-    },
-    {
-      id: "kidswear",
-      title: "Kids' Wear",
-      slug: "kidswear",
-      image: "/images/categories/kidswear.jpg",
-      summary:
-        "Soft, playful, and durable kidswear built for comfort, movement, and style.",
-    },
-    {
-      id: "polo-tees",
-      title: "Polo Tees",
-      slug: "polo-tees",
-      image: "/images/categories/polo-tees.jpg",
-      summary:
-        "Classic Polo T-shirts combining comfort and elegance — perfect for corporates, teams, and casual wear.",
-    },
-    {
-      id: "custom-logo-tees",
-      title: "Custom Logo Tees",
-      slug: "custom-logo-tees",
-      image: "/images/categories/custom-logo-tees.jpg",
-      summary:
-        "Create personalized T-shirts with custom logo prints, embroidery, or screen printing — perfect for brands and events.",
-    },
-  ];
+// Loading fallback component
+const SectionLoader = () => (
+  <div className="flex justify-center py-8">
+    <Loader />
+  </div>
+);
 
-  return (
-    <div className="bg-background min-h-screen">
-      <div className="mx-auto max-w-7xl px-6 pt-32 pb-20">
-        <div className="text-center mb-16">
-          <h1 className="font-heading text-4xl font-bold text-text-primary lg:text-5xl">
-            Our Product Categories
-          </h1>
-          <p className="mt-4 text-xl text-text-secondary max-w-4xl mx-auto">
-            Showcase all Layered Luxe product categories across Menswear,
-            Womenswear, and Kidswear, with premium quality and style for every
-            occasion.
-          </p>
-        </div>
+// Lazy load the products grid component
+const ProductsGrid = dynamic(
+  () =>
+    Promise.resolve(() => {
+      const categories = [
+        {
+          id: "menswear",
+          title: "Men's Wear",
+          slug: "menswear",
+          image: "/images/categories/menswear.jpg",
+          summary:
+            "Stylish and comfortable apparel designed for performance, confidence, and everyday wear.",
+        },
+        {
+          id: "womenswear",
+          title: "Women's Wear",
+          slug: "womenswear",
+          image: "/images/categories/womenswear.jpg",
+          summary:
+            "Elegant, versatile, and comfortable styles crafted to celebrate modern femininity.",
+        },
+        {
+          id: "kidswear",
+          title: "Kids' Wear",
+          slug: "kidswear",
+          image: "/images/categories/kidswear.jpg",
+          summary:
+            "Soft, playful, and durable kidswear built for comfort, movement, and style.",
+        },
+        {
+          id: "polo-tees",
+          title: "Polo Tees",
+          slug: "polo-tees",
+          image: "/images/categories/polo-tees.jpg",
+          summary:
+            "Classic Polo T-shirts combining comfort and elegance — perfect for corporates, teams, and casual wear.",
+        },
+        {
+          id: "custom-logo-tees",
+          title: "Custom Logo Tees",
+          slug: "custom-logo-tees",
+          image: "/images/categories/custom-logo-tees.jpg",
+          summary:
+            "Create personalized T-shirts with custom logo prints, embroidery, or screen printing — perfect for brands and events.",
+        },
+      ];
 
+      return (
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-20">
           {categories.map((category) => (
             <Link
@@ -107,6 +107,31 @@ export default function ProductsPage() {
             </Link>
           ))}
         </div>
+      );
+    }),
+  {
+    loading: () => <SectionLoader />,
+  }
+);
+
+export default function ProductsPage() {
+  return (
+    <div className="bg-background min-h-screen">
+      <div className="mx-auto max-w-7xl px-6 pt-32 pb-20">
+        <div className="text-center mb-16">
+          <h1 className="font-heading text-4xl font-bold text-text-primary lg:text-5xl">
+            Our Product Categories
+          </h1>
+          <p className="mt-4 text-xl text-text-secondary max-w-4xl mx-auto">
+            Showcase all Layered Luxe product categories across Menswear,
+            Womenswear, and Kidswear, with premium quality and style for every
+            occasion.
+          </p>
+        </div>
+
+        <Suspense fallback={<SectionLoader />}>
+          <ProductsGrid />
+        </Suspense>
 
         {/* CTA Section */}
         <section className="text-center">

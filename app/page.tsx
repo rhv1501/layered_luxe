@@ -1,7 +1,35 @@
 import Hero from "./components/Hero";
-import CategoryGrid from "./components/CategoryGrid";
-import TestimonialsSection from "./components/TestimonialsSection";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import Loader from "./components/Loader";
+
+// Lazy load heavy components with loading fallbacks
+const CategoryGrid = dynamic(() => import("./components/CategoryGrid"), {
+  loading: () => (
+    <div className="flex justify-center py-12">
+      <Loader />
+    </div>
+  ),
+});
+
+const TestimonialsSection = dynamic(
+  () => import("./components/TestimonialsSection"),
+  {
+    loading: () => (
+      <div className="flex justify-center py-12">
+        <Loader />
+      </div>
+    ),
+  }
+);
+
+// Loading fallback components
+const SectionLoader = () => (
+  <div className="flex justify-center py-8">
+    <Loader />
+  </div>
+);
 
 export default function Home() {
   return (
@@ -113,7 +141,9 @@ export default function Home() {
                 comfort across 8 specialized categories designed for every need.
               </p>
             </div>
-            <CategoryGrid />
+            <Suspense fallback={<SectionLoader />}>
+              <CategoryGrid />
+            </Suspense>
           </div>
         </section>
 
@@ -239,7 +269,9 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <TestimonialsSection />
+        <Suspense fallback={<SectionLoader />}>
+          <TestimonialsSection />
+        </Suspense>
 
         {/* Quality Section */}
         <section className="py-20 bg-background border-t border-secondary">

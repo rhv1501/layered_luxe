@@ -1,4 +1,18 @@
-import Link from "next/link";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import Loader from "../components/Loader";
+
+// Loading fallback component
+const SectionLoader = () => (
+  <div className="flex justify-center py-8">
+    <Loader />
+  </div>
+);
+
+// Lazy load the blog grid
+const BlogGrid = dynamic(() => import("../../components/BlogGrid"), {
+  loading: () => <SectionLoader />,
+});
 
 const blogPosts = [
   {
@@ -68,63 +82,9 @@ export default function BlogPage() {
       {/* Blog Posts Grid */}
       <section className="pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {blogPosts.map((post, index) => (
-              <article
-                key={post.id}
-                className="group bg-surface border border-accent/20 rounded-2xl shadow-sm hover:shadow-lg hover:border-accent/40 transition-all duration-300 overflow-hidden"
-              >
-                <div className="aspect-[16/10] overflow-hidden bg-secondary">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-80"
-                  />
-                </div>
-
-                <div className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="inline-flex items-center rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent">
-                      {post.category}
-                    </span>
-                    <div className="flex items-center gap-2 text-sm text-text-secondary">
-                      <time>{post.date}</time>
-                      <span>•</span>
-                      <span>{post.readTime}</span>
-                    </div>
-                  </div>
-
-                  <h2 className="font-heading text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors">
-                    <Link href={`/blog/${post.id}`}>{post.title}</Link>
-                  </h2>
-
-                  <p className="text-text-secondary mb-6 font-body leading-relaxed">
-                    {post.excerpt}
-                  </p>
-
-                  <Link
-                    href={`/blog/${post.id}`}
-                    className="inline-flex items-center text-sm font-semibold text-accent hover:text-text-primary transition-colors group"
-                  >
-                    Read Article
-                    <svg
-                      className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+          <Suspense fallback={<SectionLoader />}>
+            <BlogGrid blogPosts={blogPosts} />
+          </Suspense>
 
           {/* Load More Section */}
           <div className="mt-16 text-center">
