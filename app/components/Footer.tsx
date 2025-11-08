@@ -74,34 +74,34 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               <li>
                 <Link
-                  href="/products/school"
+                  href="/products/menswear"
                   className="text-sm text-text-secondary hover:text-text-primary"
                 >
-                  School Uniforms
+                  Men&apos;s Wear
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/college"
+                  href="/products/womenswear"
                   className="text-sm text-text-secondary hover:text-text-primary"
                 >
-                  College Uniforms
+                  Women&apos;s Wear
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/corporate"
+                  href="/products/kidswear"
                   className="text-sm text-text-secondary hover:text-text-primary"
                 >
-                  Corporate Wear
+                  Kids&apos; Wear
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/sports"
+                  href="/uniforms"
                   className="text-sm text-text-secondary hover:text-text-primary"
                 >
-                  Sportswear
+                  Uniforms
                 </Link>
               </li>
             </ul>

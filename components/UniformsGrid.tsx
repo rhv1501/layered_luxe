@@ -81,26 +81,9 @@ const UniformsGrid: React.FC<UniformsGridProps> = ({ uniformSolutions }) => {
             <h3 className="font-heading text-2xl font-bold text-text-primary group-hover:text-accent transition-colors mb-4">
               {uniform.title}
             </h3>
-            <p className="text-text-secondary leading-relaxed mb-6">
+            <p className="text-text-secondary leading-relaxed">
               {uniform.description}
             </p>
-
-            <div className="flex items-center text-accent font-medium">
-              <span>Explore Collection</span>
-              <svg
-                className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </div>
           </div>
         </Link>
       ))}
