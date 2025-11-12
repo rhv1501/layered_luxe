@@ -1,4 +1,4 @@
-import { categories } from "../../data/categories";
+import { categories } from "../data/categories";
 import Link from "next/link";
 import Image from "next/image";
 

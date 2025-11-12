@@ -2,10 +2,7 @@
 
 import Stepper from "../components/Stepper";
 import FabricSwatches from "../components/FabricSwatches";
-import {
-  customizationTechniques,
-  CustomizationTechnique,
-} from "../../data/customizationTechniques";
+import { customizationTechniques } from "../data/customizationTechniques";
 import Image from "next/image";
 import React from "react";
 

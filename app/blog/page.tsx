@@ -10,7 +10,7 @@ const SectionLoader = () => (
 );
 
 // Lazy load the blog grid
-const BlogGrid = dynamic(() => import("../../components/BlogGrid"), {
+const BlogGrid = dynamic(() => import("../components/BlogGrid"), {
   loading: () => <SectionLoader />,
 });
 

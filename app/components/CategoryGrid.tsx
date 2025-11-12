@@ -3,49 +3,58 @@ import SegmentCard from "./SegmentCard";
 export default function CategoryGrid() {
   const categories = [
     {
-      id: "menswear",
-      title: "Men's Wear",
-      slug: "menswear",
+      id: "Customised polo neck tees",
+      title: "Custom Polo Neck T-Shirts for Men",
+      slug: "polo-neck-tshirts",
       image: "/menswear.png",
       description:
-        "Stylish and comfortable apparel designed for performance, confidence, and everyday wear.",
+        "Premium-quality customised polo neck T-shirts designed for men. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
       productCount: 16,
     },
     {
-      id: "womenswear",
-      title: "Women's Wear",
-      slug: "womenswear",
-      image: "/vercel.svg",
+      id: "Customised round neck tees",
+      title: "Custom Round Neck T-Shirts",
+      slug: "round-neck-tshirts",
+      image: "/window.svg",
       description:
-        "Elegant, versatile, and comfortable styles crafted to celebrate modern femininity.",
-      productCount: 9,
-    },
-    {
-      id: "kidswear",
-      title: "Kids' Wear",
-      slug: "kidswear",
-      image: "/globe.svg",
-      description:
-        "Soft, playful, and durable kidswear built for comfort, movement, and style.",
+        "High-quality customised round neck T-shirts for casual, event, or promotional use. Soft, breathable fabric with vibrant printing options including screen, DTF, and sublimation. Ideal for brands, startups, and college events.",
       productCount: 8,
     },
     {
-      id: "polo-tees",
-      title: "Polo Tees",
-      slug: "polo-tees",
-      image: "/window.svg",
-      description:
-        "Classic Polo T-shirts combining comfort and elegance — perfect for corporates, teams, and casual wear.",
-      productCount: 4,
-    },
-    {
-      id: "custom-logo-tees",
-      title: "Custom Logo Tees",
-      slug: "custom-logo-tees",
+      id: "corporate shirts and pants",
+      title: "Corporate Uniforms – Shirts & Pants",
+      slug: "corporate-shirts-pants",
       image: "/file.svg",
       description:
-        "Create personalized T-shirts with custom logo prints, embroidery, or screen printing — perfect for brands and events.",
-      productCount: 4,
+        "Professional corporate shirts and pants tailored for comfort and style. Perfect for offices, hospitality, and formal workwear. Available in multiple fits, colors, and branding options for a polished team look.",
+      productCount: 10,
+    },
+    {
+      id: "jerseys",
+      title: "Custom Jerseys",
+      slug: "jerseys",
+      image: "/file.svg",
+      description:
+        "Personalised sports jerseys crafted for teams, tournaments, and fitness events. Choose from Dri-FIT, mesh, or polyester materials with full sublimation printing. Add names, numbers, and logos to showcase your team spirit.",
+      productCount: 6,
+    },
+    {
+      id: "Hoodies and Jackets",
+      title: "Custom Hoodies & Jackets",
+      slug: "custom-hoodies-jackets",
+      image: "/file.svg",
+      description:
+        "Stay warm in style with customised hoodies and jackets. Perfect for corporate gifting, winter campaigns, and team branding. Available in cotton fleece, polyester, and zipper styles with embroidered or printed logos.",
+      productCount: 7,
+    },
+    {
+      id: "Promotional Tees",
+      title: "Promotional T-Shirts for Events & Brands",
+      slug: "promotional-tshirts",
+      image: "/file.svg",
+      description:
+        "Affordable promotional T-shirts ideal for marketing campaigns, giveaways, college fests, and product launches. Lightweight cotton fabric with high-quality printing for maximum brand visibility and comfort.",
+      productCount: 12,
     },
   ];
 

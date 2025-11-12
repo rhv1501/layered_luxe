@@ -43,7 +43,7 @@ export default function Navigation() {
       {/* Announcement Bar - Sticky */}
       <div
         className="sticky top-0 z-50"
-        style={{ backgroundColor: "#F4A624", color: "#0B2C57" }}
+        style={{ backgroundColor: "#0b2c57", color: "#f4a624" }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Mobile Layout - Single Row with scrollable contact info */}
@@ -250,7 +250,7 @@ export default function Navigation() {
               <div className="flex items-center space-x-4 ml-6">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-6 py-2.5 rounded-xl bg-accent text-sm font-semibold text-primary hover:bg-accent/90 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-2.5 rounded-xl bg-primary text-sm font-semibold text-white hover:text-yellow-400 transition-all duration-300"
                 >
                   Contact
                 </Link>

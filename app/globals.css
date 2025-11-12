@@ -60,9 +60,9 @@
 
 /* Tailwind Theme Extension */
 .theme-default {
-  --color-primary: #0b2c57;
+  --color-primary: #f4a624;
   --color-secondary: #f8f9fa;
-  --color-accent: #f4a624;
+  --color-accent: #0b2c57;
   --color-teal: #1e9db4;
   --color-aqua: #3ccfc1;
   --color-royal: #234d91;

@@ -1,286 +1,221 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
-import dynamic from "next/dynamic";
-import Loader from "../../components/Loader";
 
-// Loading fallback component
-const SectionLoader = () => (
-  <div className="flex justify-center py-8">
-    <Loader />
-  </div>
-);
-
-// Lazy load the products grid
-const ProductsGrid = dynamic(() => import("../../../components/ProductsGrid"), {
-  loading: () => <SectionLoader />,
-});
-
-const categoryData = {
-  menswear: {
-    title: "Men's Wear",
-    image: "/images/categories/menswear.jpg",
-    summary:
-      "Stylish and comfortable apparel designed for performance, confidence, and everyday wear.",
-    subcategories: [
-      {
-        name: "T-Shirts",
-        description:
-          "Premium cotton t-shirts designed for everyday comfort and style. Available in various fits and colors.",
-      },
-      {
-        name: "Polo T-Shirts",
-        description:
-          "Classic polo shirts combining elegance and comfort, perfect for casual and semi-formal occasions.",
-      },
-      {
-        name: "Oversized T-Shirts",
-        description:
-          "Trendy oversized t-shirts for a relaxed, contemporary look with maximum comfort.",
-      },
-      {
-        name: "Men's Hoodies",
-        description:
-          "Cozy hoodies crafted from soft fabrics, ideal for layering and casual wear.",
-      },
-      {
-        name: "Sweatshirts",
-        description:
-          "Comfortable sweatshirts perfect for workouts, lounging, or casual outings.",
-      },
-      {
-        name: "Formal Shirts",
-        description:
-          "Professional dress shirts tailored for business and formal occasions.",
-      },
-      {
-        name: "Pajamas",
-        description:
-          "Soft, breathable sleepwear designed for ultimate comfort and relaxation.",
-      },
-      {
-        name: "Formal Pants",
-        description:
-          "Tailored formal trousers that combine style, comfort, and professional appearance.",
-      },
-      {
-        name: "Shorts",
-        description:
-          "Versatile shorts for casual wear, sports, or summer comfort in various styles.",
-      },
-      {
-        name: "Hawaiian Shirts",
-        description:
-          "Vibrant, tropical-inspired shirts perfect for vacations and casual summer wear.",
-      },
-      {
-        name: "Men's Bathrobes",
-        description:
-          "Luxurious bathrobes made from absorbent materials for post-shower comfort.",
-      },
-      {
-        name: "Men's Cargo Pants",
-        description:
-          "Functional cargo pants with multiple pockets, perfect for outdoor activities and casual wear.",
-      },
-      {
-        name: "Men's Jeans Pants",
-        description:
-          "Classic denim jeans in various cuts and washes for timeless style and durability.",
-      },
-      {
-        name: "Men's Denim Jackets",
-        description:
-          "Stylish denim jackets that add a classic touch to any casual outfit.",
-      },
-      {
-        name: "Men's Track Pants",
-        description:
-          "Athletic track pants designed for sports, workouts, or comfortable lounging.",
-      },
-      {
-        name: "Men's Athletic Tanks",
-        description:
-          "Breathable tank tops perfect for gym sessions and active lifestyle.",
-      },
+const productData = {
+  "polo-neck-tshirts": {
+    title: "Custom Polo Neck T-Shirts for Men",
+    slug: "polo-neck-tshirts",
+    description:
+      "Premium-quality customised polo neck T-shirts designed for men. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
+    features: [
+      "100% Premium Cotton Material",
+      "Collar & Sleeve Customization",
+      "Logo Printing & Embroidery",
+      "Multiple Color Options",
+      "Size Range: S to 4XL",
+      "GSM Options: 160-220",
+      "Quick Turnaround (5-7 days)",
+      "Bulk Order Discounts",
+    ],
+    specifications: {
+      material: "100% Cotton / Cotton Blend",
+      gsm: "160-220 GSM",
+      sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
+      colors: "20+ Colors Available",
+      printing: "Screen Print, DTF, Embroidery",
+      moq: "Minimum 25 pieces",
+    },
+    gallery: [
+      "/menswear.png",
+      "/menswear.png",
+      "/menswear.png",
+      "/menswear.png",
     ],
   },
-  womenswear: {
-    title: "Women's Wear",
-    image: "/images/categories/womenswear.jpg",
-    summary:
-      "Elegant, versatile, and comfortable styles crafted to celebrate modern femininity.",
-    subcategories: [
-      {
-        name: "Women's T-Shirts",
-        description:
-          "Stylish t-shirts designed with feminine cuts and premium fabrics for everyday elegance.",
-      },
-      {
-        name: "Oversized Tees",
-        description:
-          "Trendy oversized t-shirts that offer comfort and contemporary style for casual wear.",
-      },
-      {
-        name: "Women's Hoodies",
-        description:
-          "Cozy hoodies with flattering fits, perfect for layering and casual comfort.",
-      },
-      {
-        name: "Yoga Pants",
-        description:
-          "Flexible, breathable yoga pants designed for movement, exercise, and active lifestyle.",
-      },
-      {
-        name: "Women's Shorts",
-        description:
-          "Comfortable and stylish shorts in various lengths and fits for different occasions.",
-      },
-      {
-        name: "Women's Tank Tops",
-        description:
-          "Versatile tank tops perfect for layering, workouts, or warm weather comfort.",
-      },
-      {
-        name: "Women's Co-Ord Sets",
-        description:
-          "Matching coordinate sets that offer effortless style and coordinated fashion.",
-      },
-      {
-        name: "Women's Pajama Shorts",
-        description:
-          "Comfortable sleepwear shorts made from soft materials for restful nights.",
-      },
-      {
-        name: "Women's Jeggings",
-        description:
-          "Stretchy jeggings that combine the look of jeans with the comfort of leggings.",
-      },
+  "round-neck-tshirts": {
+    title: "Custom Round Neck T-Shirts",
+    slug: "round-neck-tshirts",
+    description:
+      "High-quality customised round neck T-shirts for casual, event, or promotional use. Soft, breathable fabric with vibrant printing options including screen, DTF, and sublimation. Ideal for brands, startups, and college events.",
+    features: [
+      "Soft Cotton Fabric",
+      "Vibrant Print Quality",
+      "Lightweight & Breathable",
+      "DTF & Screen Printing",
+      "Sublimation Options",
+      "Event & Promotional Use",
+      "Custom Design Support",
+      "Fast Delivery",
+    ],
+    specifications: {
+      material: "Cotton / Polyester Blend",
+      gsm: "140-180 GSM",
+      sizes: "S, M, L, XL, 2XL, 3XL",
+      colors: "15+ Colors Available",
+      printing: "DTF, Screen Print, Sublimation",
+      moq: "Minimum 20 pieces",
+    },
+    gallery: ["/window.svg", "/window.svg", "/window.svg", "/window.svg"],
+  },
+  "corporate-shirts-pants": {
+    title: "Corporate Uniforms – Shirts & Pants",
+    slug: "corporate-shirts-pants",
+    description:
+      "Professional corporate shirts and pants tailored for comfort and style. Perfect for offices, hospitality, and formal workwear. Available in multiple fits, colors, and branding options for a polished team look.",
+    features: [
+      "Professional Tailoring",
+      "Comfort Fit Design",
+      "Wrinkle-Free Fabric",
+      "Corporate Branding",
+      "Multiple Fits Available",
+      "Hospitality Grade Quality",
+      "Coordinated Sets",
+      "Bulk Pricing",
+    ],
+    specifications: {
+      material: "Cotton Blend / Polyester",
+      gsm: "120-160 GSM",
+      sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
+      colors: "Corporate Colors Available",
+      printing: "Embroidery, Heat Transfer",
+      moq: "Minimum 30 pieces",
+    },
+    gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
+  },
+  "school-uniforms": {
+    title: "Custom School Uniforms",
+    slug: "school-uniforms",
+    description:
+      "Premium-quality school uniforms tailored for comfort, durability, and a smart appearance. Perfect for schools, academies, and institutions seeking custom-designed shirts, pants, skirts, and sportswear. Available with embroidery or logo printing for a professional identity.",
+    features: [
+      "Durable Cotton & Polyester Fabric",
+      "Custom Logo Embroidery",
+      "Complete Uniform Sets",
+      "Tailored Fit for Comfort",
+      "Wrinkle-Resistant Material",
+      "Machine Washable",
+      "Color-Fast Dyes",
+      "Institutional Branding",
+      "Sports & PE Uniforms",
+      "Formal & Casual Options",
+      "Size Range for All Ages",
+      "Bulk Order Benefits",
+    ],
+    specifications: {
+      material: "Cotton Blend / Polyester",
+      gsm: "140-180 GSM",
+      sizes: "Age 3-18, Adult S-4XL",
+      colors: "School Colors Available",
+      printing: "Embroidery, Screen Print, Heat Transfer",
+      moq: "Minimum 25 pieces",
+    },
+    gallery: [
+      "/school-uniforms.png",
+      "/school-uniforms.png",
+      "/school-uniforms.png",
+      "/school-uniforms.png",
     ],
   },
-  kidswear: {
-    title: "Kids' Wear",
-    image: "/images/categories/kidswear.jpg",
-    summary:
-      "Soft, playful, and durable kidswear built for comfort, movement, and style.",
-    subcategories: [
-      {
-        name: "Kids T-Shirts",
-        description:
-          "Fun and comfortable t-shirts designed for active children with playful designs.",
-      },
-      {
-        name: "Polo T-Shirts",
-        description:
-          "Smart-casual polo shirts for kids that are perfect for school and special occasions.",
-      },
-      {
-        name: "Baby Onesies",
-        description:
-          "Soft, adorable onesies for babies made from gentle, skin-friendly materials.",
-      },
-      {
-        name: "Baby Rompers",
-        description:
-          "Cute and practical rompers for babies that are easy to wear and change.",
-      },
-      {
-        name: "Kids Pajamas",
-        description:
-          "Cozy sleepwear for children featuring fun prints and comfortable fits.",
-      },
-      {
-        name: "Kids Vests",
-        description:
-          "Essential undergarments and outerwear vests for children's comfort and layering.",
-      },
-      {
-        name: "Kids Shorts",
-        description:
-          "Durable and comfortable shorts for active children during play and sports.",
-      },
-      {
-        name: "Baby Underpants",
-        description:
-          "Soft, comfortable undergarments designed specifically for babies and toddlers.",
-      },
+  jerseys: {
+    title: "Custom Jerseys",
+    slug: "jerseys",
+    description:
+      "Personalised sports jerseys crafted for teams, tournaments, and fitness events. Choose from Dri-FIT, mesh, or polyester materials with full sublimation printing. Add names, numbers, and logos to showcase your team spirit.",
+    features: [
+      "Dri-FIT Technology",
+      "Mesh Ventilation",
+      "Full Sublimation Printing",
+      "Name & Number Customization",
+      "Team Logo Integration",
+      "Tournament Ready",
+      "Athletic Fit",
+      "Moisture-Wicking",
     ],
+    specifications: {
+      material: "Polyester Mesh / Dri-FIT",
+      gsm: "130-160 GSM",
+      sizes: "S, M, L, XL, 2XL, 3XL",
+      colors: "Full Color Sublimation",
+      printing: "Sublimation, Heat Press",
+      moq: "Minimum 15 pieces",
+    },
+    gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
   },
-  "polo-tees": {
-    title: "Polo Tees",
-    image: "/images/categories/polo-tees.jpg",
-    summary:
-      "Classic Polo T-shirts combining comfort and elegance — perfect for corporates, teams, and casual wear.",
-    subcategories: [
-      {
-        name: "Cotton Polo Tees",
-        description:
-          "Premium 100% cotton polo shirts offering breathability and timeless style.",
-      },
-      {
-        name: "Pique Knit Polo Tees",
-        description:
-          "Textured pique knit polos that provide enhanced airflow and professional appearance.",
-      },
-      {
-        name: "Performance Polo Tees",
-        description:
-          "Athletic polo shirts with moisture-wicking properties for active lifestyles.",
-      },
-      {
-        name: "Customized Polo Tees",
-        description:
-          "Personalized polo shirts with custom logos, embroidery, and branding options.",
-      },
+  "custom-hoodies-jackets": {
+    title: "Custom Hoodies & Jackets",
+    slug: "custom-hoodies-jackets",
+    description:
+      "Stay warm in style with customised hoodies and jackets. Perfect for corporate gifting, winter campaigns, and team branding. Available in cotton fleece, polyester, and zipper styles with embroidered or printed logos.",
+    features: [
+      "Premium Fleece Material",
+      "Zipper & Pullover Options",
+      "Corporate Gifting Ready",
+      "Embroidered Logos",
+      "Winter Campaign Suitable",
+      "Team Branding Options",
+      "Multiple Colors",
+      "Custom Sizing",
     ],
+    specifications: {
+      material: "Cotton Fleece / Polyester",
+      gsm: "280-320 GSM",
+      sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
+      colors: "12+ Colors Available",
+      printing: "Embroidery, Screen Print",
+      moq: "Minimum 25 pieces",
+    },
+    gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
   },
-  "custom-logo-tees": {
-    title: "Custom Logo Tees",
-    image: "/images/categories/custom-logo-tees.jpg",
-    summary:
-      "Create personalized T-shirts with custom logo prints, embroidery, or screen printing — perfect for brands and events.",
-    subcategories: [
-      {
-        name: "Corporate Logo Tees",
-        description:
-          "Professional branded t-shirts for companies, featuring custom logos and corporate colors.",
-      },
-      {
-        name: "Event & Promotional Tees",
-        description:
-          "Custom t-shirts perfect for events, promotions, and marketing campaigns.",
-      },
-      {
-        name: "Team & Sports Tees",
-        description:
-          "Customized team shirts for sports groups, clubs, and organizations.",
-      },
-      {
-        name: "Custom Printed Tees",
-        description:
-          "Personalized t-shirts with custom designs, graphics, and text printing.",
-      },
+  "promotional-tshirts": {
+    title: "Promotional T-Shirts for Events & Brands",
+    slug: "promotional-tshirts",
+    description:
+      "Affordable promotional T-shirts ideal for marketing campaigns, giveaways, college fests, and product launches. Lightweight cotton fabric with high-quality printing for maximum brand visibility and comfort.",
+    features: [
+      "Budget-Friendly Pricing",
+      "Marketing Campaign Ready",
+      "College Fest Suitable",
+      "Product Launch Events",
+      "High-Quality Printing",
+      "Maximum Brand Visibility",
+      "Lightweight Comfort",
+      "Bulk Order Benefits",
     ],
+    specifications: {
+      material: "Cotton / Cotton Blend",
+      gsm: "140-160 GSM",
+      sizes: "S, M, L, XL, 2XL, 3XL",
+      colors: "10+ Colors Available",
+      printing: "Screen Print, DTF",
+      moq: "Minimum 50 pieces",
+    },
+    gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
   },
 };
 
-export default async function CategoryPage({
+export default async function ProductPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const category = categoryData[slug as keyof typeof categoryData];
+  const product = productData[slug as keyof typeof productData];
 
-  if (!category) {
+  if (!product) {
     notFound();
   }
 
+  const whatsappMessage = `Hi! I'm interested in ${product.title}. Can you provide more details and pricing for bulk orders?`;
+  const whatsappUrl = `https://wa.me/+919876543210?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
   return (
     <div className="bg-background min-h-screen">
-      <div className="mx-auto max-w-7xl px-6 pt-32 pb-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         {/* Breadcrumb */}
-        <nav className="mb-8">
+        <nav className="mb-8 pt-8">
           <ol className="flex items-center space-x-2 text-sm">
             <li>
               <Link
@@ -303,44 +238,303 @@ export default async function CategoryPage({
                 />
               </svg>
             </li>
-            <li className="text-text-primary font-medium">{category.title}</li>
+            <li className="text-accent font-medium">{product.title}</li>
           </ol>
         </nav>
 
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="font-heading text-4xl font-bold text-text-primary lg:text-5xl mb-6">
-            {category.title}
-          </h1>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            {category.summary}
-          </p>
+        {/* Product Main Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* Image Gallery */}
+          <div className="space-y-4">
+            {/* Main Image */}
+            <div className="aspect-square rounded-3xl overflow-hidden bg-white shadow-2xl border border-gray-200">
+              <Image
+                src={product.gallery[0]}
+                alt={product.title}
+                width={600}
+                height={600}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                priority
+              />
+            </div>
+
+            {/* Thumbnail Gallery */}
+            <div className="grid grid-cols-4 gap-4">
+              {product.gallery.map((image, index) => (
+                <div
+                  key={index}
+                  className="aspect-square rounded-xl overflow-hidden bg-white shadow-md border border-gray-100"
+                >
+                  <Image
+                    src={image}
+                    alt={`${product.title} view ${index + 1}`}
+                    width={150}
+                    height={150}
+                    className="w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Product Info */}
+          <div className="space-y-8">
+            {/* Product Header */}
+            <div>
+              <div className="inline-flex items-center space-x-2 px-3 py-1 bg-accent/10 rounded-full text-accent font-semibold text-sm mb-4">
+                <span>🏷️</span>
+                <span>Custom Apparel</span>
+              </div>
+              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary leading-tight mb-4">
+                {product.title}
+              </h1>
+              <p className="text-lg text-text-secondary leading-relaxed mb-6">
+                {product.description}
+              </p>
+              <div className="text-lg font-semibold text-accent mb-2">
+                Contact us for custom pricing and bulk order discounts
+              </div>
+            </div>
+
+            {/* Product Features */}
+            <div>
+              <h3 className="text-xl font-bold text-text-primary mb-4">
+                Key Features
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {product.features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center space-x-3 p-3 bg-white rounded-xl shadow-sm border border-gray-100"
+                  >
+                    <div className="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
+                      <svg
+                        className="w-4 h-4 text-accent"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text-secondary text-sm">
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4">
+                {/* WhatsApp Inquiry */}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 group inline-flex items-center justify-center space-x-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+                  </svg>
+                  <span className="font-bold">Inquire on WhatsApp</span>
+                </a>
+
+                {/* Contact Form */}
+                <Link
+                  href="/contact"
+                  className="flex-1 group inline-flex items-center justify-center space-x-3 px-8 py-4 bg-accent hover:bg-accent/90 text-primary rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    />
+                  </svg>
+                  <span className="font-bold">Get Detailed Quote</span>
+                </Link>
+              </div>
+
+              <div className="text-center text-sm text-text-secondary">
+                💡 <span className="font-semibold">Need bulk pricing?</span>{" "}
+                Contact us for special discounts on orders above 100 pieces
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Products Grid */}
-        <Suspense fallback={<SectionLoader />}>
-          <ProductsGrid category={category} />
-        </Suspense>
+        {/* Product Specifications */}
+        <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 mb-16">
+          <h2 className="text-2xl font-bold text-text-primary mb-8 text-center">
+            Product Specifications
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.entries(product.specifications).map(([key, value]) => (
+              <div key={key} className="bg-gray-50 rounded-2xl p-6 text-center">
+                <div className="text-accent font-semibold text-sm uppercase tracking-wide mb-2">
+                  {key
+                    .replace(/([A-Z])/g, " $1")
+                    .replace(/^./, (str) => str.toUpperCase())}
+                </div>
+                <div className="text-text-primary font-bold text-lg">
+                  {value}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Why Choose Us */}
+        <div className="bg-gradient-primary rounded-3xl p-8 lg:p-12 text-white mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Why Choose Layered Luxe?
+            </h2>
+            <p className="text-white/90 max-w-2xl mx-auto">
+              We deliver premium quality products with exceptional customization
+              options and unmatched service quality.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2">Premium Quality</h3>
+              <p className="text-white/80 text-sm">
+                Top-grade materials and manufacturing processes
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2">Fast Delivery</h3>
+              <p className="text-white/80 text-sm">
+                Quick turnaround times without compromising quality
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2">Competitive Pricing</h3>
+              <p className="text-white/80 text-sm">
+                Best rates with bulk order discounts
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2">Custom Solutions</h3>
+              <p className="text-white/80 text-sm">
+                Tailored designs and branding options
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-linear-to-br from-accent via-accent to-accent/80 rounded-3xl p-12 lg:p-16 relative overflow-hidden">
-            <div className="relative z-10">
-              <h2 className="font-heading text-3xl font-bold text-primary lg:text-4xl mb-6">
-                Ready to Order {category.title}?
-              </h2>
-              <p className="text-lg text-primary/90 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Get a custom quote for your {category.title.toLowerCase()}{" "}
-                requirements. We&apos;ll help you choose the perfect products
-                with custom branding.
-              </p>
+        <div className="text-center bg-gradient-subtle rounded-3xl p-12">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-text-primary mb-4">
+              Ready to Place Your Order?
+            </h2>
+            <p className="text-lg text-text-secondary mb-8">
+              Get started with your custom {product.title.toLowerCase()} order
+              today. Our team will help you with design, pricing, and delivery
+              timeline.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+                </svg>
+                <span>Quick WhatsApp Chat</span>
+              </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-primary px-8 py-4 text-lg font-semibold text-text-primary hover:bg-surface transition-all shadow-xl hover:shadow-2xl hover:scale-105"
+                className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-accent hover:bg-accent/90 text-primary rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
-                Get Custom Quote
                 <svg
-                  className="ml-2 w-5 h-5"
+                  className="w-5 h-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -352,17 +546,11 @@ export default async function CategoryPage({
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
+                <span>Get Detailed Quote</span>
               </Link>
             </div>
-
-            {/* Background Decoration */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-10 left-10 w-20 h-20 border border-primary rounded-full"></div>
-              <div className="absolute bottom-10 right-10 w-16 h-16 border border-primary rounded-full"></div>
-              <div className="absolute top-1/2 left-1/4 w-12 h-12 border border-primary rounded-full"></div>
-            </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

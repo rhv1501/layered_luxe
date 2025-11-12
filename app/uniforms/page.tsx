@@ -11,7 +11,7 @@ const SectionLoader = () => (
 );
 
 // Lazy load the uniforms grid
-const UniformsGrid = dynamic(() => import("../../components/UniformsGrid"), {
+const UniformsGrid = dynamic(() => import("../components/UniformsGrid"), {
   loading: () => <SectionLoader />,
 });
 
@@ -24,16 +24,7 @@ export default function UniformsPage() {
       description:
         "Professional shirts, trousers, ties, and accessories for a polished corporate image.",
       image: "/corporate.png",
-      href: "/products/corporate",
-    },
-    {
-      id: "healthcare",
-      title: "Healthcare Uniforms",
-      subtitle: "Healthcare Uniforms",
-      description:
-        "Comfortable scrubs, lab coats, and medical attire designed for functionality and professionalism.",
-      image: "/healthcareuniforms.png",
-      href: "/products/healthcare",
+      href: "/products/corporate-shirts-pants",
     },
     {
       id: "school",
@@ -42,25 +33,7 @@ export default function UniformsPage() {
       description:
         "Durable and comfortable school uniforms that foster pride and unity among students.",
       image: "/schooluniforms.png",
-      href: "/products/school",
-    },
-    {
-      id: "industrial",
-      title: "Industrial Workwear",
-      subtitle: "Industrial Workwear",
-      description:
-        "Durable and safety-compliant workwear for manufacturing and industrial environments.",
-      image: "/industrailuniforms.png",
-      href: "/products/industrial",
-    },
-    {
-      id: "hospitality",
-      title: "Hospitality Uniforms",
-      subtitle: "Hospitality Uniforms",
-      description:
-        "Elegant and practical uniforms for hotels, restaurants, and service industries.",
-      image: "/hospitality.png",
-      href: "/products/hospitality",
+      href: "/products/school-uniforms",
     },
     {
       id: "tshirts",
@@ -69,7 +42,7 @@ export default function UniformsPage() {
       description:
         "Semi formal t-shirts for corporate events, team-building activities, and Friday casuals.",
       image: "/tshirtuniforms.png",
-      href: "/products/tshirts",
+      href: "/products/promotional-tshirts",
     },
   ];
 
