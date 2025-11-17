@@ -882,51 +882,49 @@ export default function Home() {
         </Reveal>
 
         {/* Product Range Section */}
-        <Reveal>
-          <section className="py-20 bg-background">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="text-center mb-16">
-                <h2 className="font-heading text-3xl font-semibold text-text-primary lg:text-4xl">
-                  Explore Our Product Range
-                </h2>
-                <p className="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">
-                  Discover our premium collection of custom apparel designed for
-                  quality, comfort, and style. From corporate uniforms to
-                  promotional wear - we deliver unmatched craftsmanship for
-                  every need.
-                </p>
-              </div>
-
-              {/* Products Grid */}
-              <ProductsGrid className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12" />
-
-              {/* View All Products CTA */}
-              <div className="text-center">
-                <Link
-                  href="/products"
-                  className="group inline-flex items-center space-x-3 px-8 py-4 bg-gradient-accent rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-                >
-                  <span className="text-primary font-bold text-lg">
-                    View All Products
-                  </span>
-                  <svg
-                    className="w-6 h-6 text-primary transform group-hover:translate-x-1 transition-transform duration-300"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
+        <section className="py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-heading text-3xl font-semibold text-text-primary lg:text-4xl">
+                Explore Our Product Range
+              </h2>
+              <p className="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">
+                Discover our premium collection of custom apparel designed for
+                quality, comfort, and style. From corporate uniforms to
+                promotional wear - we deliver unmatched craftsmanship for every
+                need.
+              </p>
             </div>
-          </section>
-        </Reveal>
+
+            {/* Products Grid */}
+            <ProductsGrid className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12" />
+
+            {/* View All Products CTA */}
+            <div className="text-center">
+              <Link
+                href="/products"
+                className="group inline-flex items-center space-x-3 px-8 py-4 bg-gradient-accent rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                <span className="text-primary font-bold text-lg">
+                  View All Products
+                </span>
+                <svg
+                  className="w-6 h-6 text-primary transform group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* services Section */}
         <Reveal>
