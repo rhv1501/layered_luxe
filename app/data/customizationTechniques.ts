@@ -13,7 +13,7 @@ export const customizationTechniques: CustomizationTechnique[] = [
   {
     id: "dtf-digital-printing",
     title: "DTF Digital Printing",
-    image: "/vercel.svg",
+    image: "/dtf.webp",
     summary: "DTF (Direct-to-Film) printing produces vibrant and long-lasting designs on garments.",
     description: "DTF (Direct-to-Film) printing produces vibrant and long-lasting designs on garments. It's versatile, working well on various fabrics like cotton, polyester, and blends. DTF Digital Printing method delivers high-quality prints with detailed images including photos and gradients and sharp lines, making it ideal for custom designs and small-scale production.",
     benefits: [
@@ -29,7 +29,7 @@ export const customizationTechniques: CustomizationTechnique[] = [
   {
     id: "screen-printing",
     title: "Screen Printing",
-    image: "/next.svg",
+    image: "/screen.webp",
     summary: "Screen printing is a versatile technique that involves transferring ink onto fabric through a mesh screen.",
     description: "Screen printing is a versatile technique that involves transferring ink onto fabric through a mesh screen. It's ideal for large production runs. Screen printing is cost-effective, especially for bulk orders, and can be used on a wide range of fabrics. It's a popular choice for band merchandise, sports apparel, and custom designs.",
     benefits: [
@@ -45,7 +45,7 @@ export const customizationTechniques: CustomizationTechnique[] = [
   {
     id: "embroidery",
     title: "Embroidery",
-    image: "/window.svg",
+    image: "/embroidery.webp",
     summary: "Embroidery is a decorative needlework technique that involves using a needle and thread to create designs on fabric.",
     description: "Embroidery is a decorative needlework technique that involves using a needle and thread to create designs on fabric. It is a versatile technique that can be used to create a wide variety of designs. Embroidery can be used to add color, and texture to garments. It is a durable and long-lasting technique that can be used on a variety of fabrics.",
     benefits: [
@@ -58,68 +58,57 @@ export const customizationTechniques: CustomizationTechnique[] = [
     idealFor: ["Corporate logos", "School uniforms", "Premium apparel", "Brand identity"],
     fabrics: ["Cotton", "Polyester", "Denim", "Canvas", "Fleece"]
   },
-  {
-    id: "puff-printing",
-    title: "Puff Printing",
-    image: "/globe.svg",
-    summary: "Puff printing creates raised, 3D designs on garments with vibrant colors and a soft tactile feel.",
-    description: "Puff printing creates raised, 3D designs on garments. It offers vibrant colors, a soft and tactile feel, and a unique visual appeal. This technique is versatile, working well on various fabrics and adding a touch of luxury to clothing. It's particularly popular for logos, designs, and text, making it a great choice for branding and customization.",
-    benefits: [
-      "Creates raised 3D designs",
-      "Soft and tactile feel",
-      "Vibrant color options",
-      "Unique visual appeal",
-      "Adds luxury touch"
-    ],
-    idealFor: ["Logos", "Branding", "Text designs", "Fashion apparel"],
-    fabrics: ["Cotton", "Cotton blends", "Fleece", "Sweatshirt material"]
-  },
-  {
-    id: "silicone-hd-printing",
-    title: "Silicone HD Printing",
-    image: "/file.svg",
-    summary: "Silicone HD printing offers a luxurious and high-quality finish using laser-cut vinyl rolls.",
-    description: "Silicone HD printing offers a luxurious and high-quality finish. It uses laser-cut vinyl rolls to create 3D, raised designs with vibrant colors. This technique is durable, water-resistant, and perfect for adding a premium touch to garments. It's ideal for logos, designs, and text, and is a great choice for luxury fashion, streetwear and sportswear.",
-    benefits: [
-      "Luxurious high-quality finish",
-      "3D raised designs",
-      "Water-resistant",
-      "Durable and long-lasting",
-      "Premium feel"
-    ],
-    idealFor: ["Luxury fashion", "Streetwear", "Sportswear", "Premium branding"],
-    fabrics: ["Cotton", "Polyester", "Performance fabrics", "Athletic wear"]
-  },
-  {
-    id: "gold-foil-printing",
-    title: "Gold Foil Printing",
-    image: "/vercel.svg",
-    summary: "Gold printing adds a touch of luxury and elegance to garments using laser-cut, textured vinyl rolls.",
-    description: "Gold printing adds a touch of luxury and elegance to garments. It uses laser-cut, textured vinyl rolls to create stunning, gold-colored designs. This technique offers a real, glittery gold look, making it perfect for special occasions, costume design, dance apparel and high-end fashion. It's durable, water-resistant, and adds a premium feel to any garment.",
-    benefits: [
-      "Luxurious gold finish",
-      "Real glittery appearance",
-      "Durable and water-resistant",
-      "Perfect for special occasions",
-      "Premium aesthetic"
-    ],
-    idealFor: ["Special occasions", "Costume design", "Dance apparel", "High-end fashion"],
-    fabrics: ["Cotton", "Polyester", "Satin", "Velvet", "Performance fabrics"]
-  },
-  {
-    id: "chenille-embroidery",
-    title: "Chenille Embroidery",
-    image: "/window.svg",
-    summary: "Chenille embroidery creates a plush, velvety look on garments using special yarns.",
-    description: "Chenille embroidery creates a plush, velvety look on garments. It uses special yarns to form raised, textured designs with a luxurious feel. This technique is perfect for adding a touch of elegance and sophistication to clothing. It's ideal for logos, designs, and text, and is commonly used in high-end sportswear such as Varsity Jackets.",
-    benefits: [
-      "Plush velvety texture",
-      "Luxurious feel",
-      "Raised textured designs",
-      "Elegant and sophisticated",
-      "Premium quality finish"
-    ],
-    idealFor: ["Varsity jackets", "High-end sportswear", "Luxury apparel", "School letterman jackets"],
-    fabrics: ["Wool", "Cotton", "Polyester blends", "Fleece", "Varsity jacket materials"]
-  }
+ {
+  id: "3d-embossing",
+  title: "3D Embossing",
+  image: "/embossed.webp",
+  summary: "3D embossing creates elevated, sculpted designs on garments, delivering a premium and textured finish.",
+  description:
+    "3D embossing adds depth and dimension to designs by creating raised, sculpted impressions on the fabric. It offers a premium, long-lasting finish that feels luxurious and stands out visually. This technique works exceptionally well for minimalistic yet bold branding, logos, and signature elements, providing a refined and durable aesthetic.",
+  benefits: [
+    "Premium raised finish",
+    "Long-lasting and durable",
+    "Highly detailed embossed effect",
+    "Luxurious and refined look",
+    "Enhances brand visibility"
+  ],
+  idealFor: ["Brand logos", "Premium apparel", "Minimalistic designs", "Luxury merchandise"],
+  fabrics: ["Leather", "PU leather", "Thick cotton", "Hoodies", "Sweatshirt fabric"]
+},
+
+{
+  id: "sublimation",
+  title: "Sublimation Printing",
+  image: "/sublimation.webp",
+  summary: "Sublimation printing infuses vibrant, permanent colors into the fabric for full-color, high-detail designs.",
+  description:
+    "Sublimation printing uses heat to transfer dye directly into the fabric fibers, resulting in vibrant, permanent, and photo-quality prints. The colors do not crack, fade, or peel since the design becomes part of the material itself. This technique is perfect for all-over prints, gradients, and detailed artwork, especially on polyester-based fabrics.",
+  benefits: [
+    "Vibrant, permanent colors",
+    "Photo-quality detailing",
+    "No cracking or peeling",
+    "Lightweight and smooth feel",
+    "Perfect for all-over prints"
+  ],
+  idealFor: ["Sportswear", "Jerseys", "Polyester tees", "All-over prints", "Photo designs"],
+  fabrics: ["Polyester", "Poly blends", "White/light-colored fabrics"]
+},
+{
+  id: "batch-printing",
+  title: "Batch Printing",
+  image: "/batch.webp",
+  summary: "Batch printing delivers consistent, high-quality prints for large-volume orders with efficient turnaround.",
+  description:
+    "Batch printing is ideal for producing large quantities of garments with uniform designs. It ensures consistency, cost-efficiency, and fast production across bulk orders. This method is commonly used for uniforms, events, promotional merchandise, and brand collections where the same artwork must be replicated accurately on many pieces.",
+  benefits: [
+    "Efficient for high-volume orders",
+    "Consistent print quality",
+    "Cost-effective production",
+    "Fast turnaround for bulk",
+    "Ideal for uniforms and events"
+  ],
+  idealFor: ["Bulk orders", "Corporate uniforms", "Events and campaigns", "Merchandise production"],
+  fabrics: ["Cotton", "Polyester", "Cotton blends", "Activewear", "Hoodies"]
+}
+
 ];

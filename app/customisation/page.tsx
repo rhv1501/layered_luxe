@@ -366,7 +366,7 @@ export default function CustomisationPage() {
 
                 {/* Expandable Details */}
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  className={`overflow-auto transition-all duration-300 ease-in-out ${
                     expandedCard === technique.id
                       ? "max-h-96 opacity-100"
                       : "max-h-0 opacity-0"

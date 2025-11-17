@@ -35,15 +35,15 @@ export default function UniformsPage() {
       image: "/schooluniforms.png",
       href: "/products/school-uniforms",
     },
-    {
-      id: "tshirts",
-      title: "Uniform T Shirts",
-      subtitle: "Uniform T Shirts",
-      description:
-        "Semi formal t-shirts for corporate events, team-building activities, and Friday casuals.",
-      image: "/tshirtuniforms.png",
-      href: "/products/promotional-tshirts",
-    },
+    // {
+    //   id: "tshirts",
+    //   title: "Uniform T Shirts",
+    //   subtitle: "Uniform T Shirts",
+    //   description:
+    //     "Semi formal t-shirts for corporate events, team-building activities, and Friday casuals.",
+    //   image: "/tshirtuniforms.png",
+    //   href: "/products/promotional-tshirts",
+    // },
   ];
 
   return (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { productsData } from "../data/products";
 
 export default function Footer() {
   return (
@@ -66,44 +67,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Categories */}
+          {/* Products */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide text-text-primary">
-              Categories
+              Products
             </h4>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link
-                  href="/products/menswear"
-                  className="text-sm text-text-secondary hover:text-text-primary"
-                >
-                  Men&apos;s Wear
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products/womenswear"
-                  className="text-sm text-text-secondary hover:text-text-primary"
-                >
-                  Women&apos;s Wear
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products/kidswear"
-                  className="text-sm text-text-secondary hover:text-text-primary"
-                >
-                  Kids&apos; Wear
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/uniforms"
-                  className="text-sm text-text-secondary hover:text-text-primary"
-                >
-                  Uniforms
-                </Link>
-              </li>
+              {productsData.slice(0, 6).map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/products/${p.slug}`}
+                    className="text-sm text-text-secondary hover:text-text-primary"
+                  >
+                    {p.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
