@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
+import ProductGallery from "../../components/ProductGallery";
 
 const productData = {
   "polo-neck-tshirts": {
@@ -27,10 +27,11 @@ const productData = {
       moq: "Minimum 25 pieces",
     },
     gallery: [
-      "/menswear.png",
-      "/menswear.png",
-      "/menswear.png",
-      "/menswear.png",
+      "/poloneck/01.jpg",
+      "/poloneck/02.png",
+      "/poloneck/03.png",
+      "/poloneck/04.png",
+      "/poloneck/05.png",
     ],
   },
   "round-neck-tshirts": {
@@ -81,7 +82,12 @@ const productData = {
       printing: "Embroidery, Heat Transfer",
       moq: "Minimum 30 pieces",
     },
-    gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
+    gallery: [
+      "/shirtpant/01.png",
+      "/shirtpant/02.png",
+      "/shirtpant/03.png",
+      "/shirtpant/04.png",
+    ],
   },
   "school-uniforms": {
     title: "Custom School Uniforms",
@@ -110,12 +116,7 @@ const productData = {
       printing: "Embroidery, Screen Print, Heat Transfer",
       moq: "Minimum 25 pieces",
     },
-    gallery: [
-      "/school-uniforms.png",
-      "/school-uniforms.png",
-      "/school-uniforms.png",
-      "/school-uniforms.png",
-    ],
+    gallery: ["/uniform/03.png", "/uniform/02.png", "/uniform/01.png"],
   },
   jerseys: {
     title: "Custom Jerseys",
@@ -140,7 +141,7 @@ const productData = {
       printing: "Sublimation, Heat Press",
       moq: "Minimum 15 pieces",
     },
-    gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
+    gallery: ["/Jersey/02.png", "/Jersey/01.png", "/Jersey/03.png"],
   },
   "custom-hoodies-jackets": {
     title: "Custom Hoodies & Jackets",
@@ -165,7 +166,14 @@ const productData = {
       printing: "Embroidery, Screen Print",
       moq: "Minimum 25 pieces",
     },
-    gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
+    gallery: [
+      "/jacket/02.png",
+      "/jacket/03.png",
+      "/jacket/04.png",
+      "/jacket/05.png",
+      "/jacket/06.png",
+      "/jacket/07.png",
+    ],
   },
   "promotional-tshirts": {
     title: "Promotional T-Shirts for Events & Brands",
@@ -207,7 +215,7 @@ export default async function ProductPage({
   }
 
   const whatsappMessage = `Hi! I'm interested in ${product.title}. Can you provide more details and pricing for bulk orders?`;
-  const whatsappUrl = `https://wa.me/+919876543210?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/+919087095955?text=${encodeURIComponent(
     whatsappMessage
   )}`;
 
@@ -244,38 +252,8 @@ export default async function ProductPage({
 
         {/* Product Main Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Image Gallery */}
-          <div className="space-y-4">
-            {/* Main Image */}
-            <div className="aspect-square rounded-3xl overflow-hidden bg-white shadow-2xl border border-gray-200">
-              <Image
-                src={product.gallery[0]}
-                alt={product.title}
-                width={600}
-                height={600}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                priority
-              />
-            </div>
-
-            {/* Thumbnail Gallery */}
-            <div className="grid grid-cols-4 gap-4">
-              {product.gallery.map((image, index) => (
-                <div
-                  key={index}
-                  className="aspect-square rounded-xl overflow-hidden bg-white shadow-md border border-gray-100"
-                >
-                  <Image
-                    src={image}
-                    alt={`${product.title} view ${index + 1}`}
-                    width={150}
-                    height={150}
-                    className="w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Image Gallery (client-side interactive) */}
+          <ProductGallery gallery={product.gallery} title={product.title} />
 
           {/* Product Info */}
           <div className="space-y-8">
@@ -400,7 +378,7 @@ export default async function ProductPage({
         </div>
 
         {/* Why Choose Us */}
-        <div className="bg-gradient-primary rounded-3xl p-8 lg:p-12 text-white mb-16">
+        <div className="bg-primary rounded-3xl p-8 lg:p-12 text-white mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Why Choose Layered Luxe?

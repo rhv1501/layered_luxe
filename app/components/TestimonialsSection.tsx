@@ -166,28 +166,7 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          {/* View More Link */}
-          <div className="text-center mt-12">
-            <a
-              href="/testimonials"
-              className="inline-flex items-center px-6 py-3 rounded-xl bg-accent text-primary font-semibold hover:bg-accent/90 transition-all duration-300"
-            >
-              View All Testimonials
-              <svg
-                className="ml-2 h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
-          </div>
+          {/* View All CTA removed — testimonials page retained but navigation removed per request */}
         </div>
       </section>
     </div>

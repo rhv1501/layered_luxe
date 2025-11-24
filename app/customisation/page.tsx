@@ -482,7 +482,7 @@ export default function CustomisationPage() {
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl bg-primary px-8 py-4 text-base font-semibold text-text-primary hover:bg-surface transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center justify-center rounded-2xl bg-primary px-8 py-4 text-base font-semibold text-white hover:bg-surface transition-all shadow-lg hover:shadow-xl"
             >
               Contact Us
             </a>

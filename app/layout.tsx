@@ -27,6 +27,23 @@ export const metadata: Metadata = {
   title: "Layered Luxe - Let's Build Apparel Success Together",
   description:
     "T-Shirts, Hoodies, Workwear & More — Designed for Comfort, Style, and Performance. Premium apparel manufacturing in India with global standards.",
+  icons: {
+    icon: [
+      {
+        url: "/favicon_io/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon_io/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      { url: "/favicon_io/favicon.ico", type: "image/x-icon" },
+    ],
+    apple: "/favicon_io/apple-touch-icon.png",
+    other: { rel: "manifest", url: "/favicon_io/site.webmanifest" },
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +53,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/favicon_io/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon_io/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon_io/favicon-16x16.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon_io/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/favicon_io/site.webmanifest" />
+      </head>
       <body
         className={`${inter.variable} ${poppins.variable} ${dmSans.variable} font-sans antialiased bg-background text-text-primary`}
       >

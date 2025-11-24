@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -11,9 +12,9 @@ export default function Navigation() {
     { name: "About", href: "/about" },
     { name: "Uniforms", href: "/uniforms" },
     { name: "Products", href: "/products" },
-    { name: "Fabrics", href: "/fabrics" },
+    // Fabrics temporarily removed from nav (folder retained for future use)
     { name: "Quality", href: "/quality" },
-    { name: "Customisation", href: "/customisation" },
+    { name: "Order Process", href: "/customisation" },
     { name: "Blogs", href: "/blog" },
   ];
 
@@ -51,7 +52,7 @@ export default function Navigation() {
             {/* Contact Info - Scrollable on mobile */}
             <div className="flex items-center gap-4 overflow-x-auto flex-1 mr-3">
               <a
-                href="tel:+919876543210"
+                href="tel:+919087095955"
                 className="flex items-center hover:text-primary/80 transition-colors whitespace-nowrap text-xs"
               >
                 <svg
@@ -61,10 +62,10 @@ export default function Navigation() {
                 >
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span className="font-medium">Call: +91-98765-43210</span>
+                <span className="font-medium">Call: +91-90870-95955</span>
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919087095955"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:text-primary/80 transition-colors whitespace-nowrap text-xs"
@@ -82,7 +83,7 @@ export default function Navigation() {
 
             {/* Social Links - Compact on mobile */}
             <div className="flex items-center gap-2 shrink-0">
-              <a
+              {/* <a
                 href="https://facebook.com/layeredluxe"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -95,9 +96,9 @@ export default function Navigation() {
                 >
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
-              </a>
+              </a> */}
               <a
-                href="https://instagram.com/layeredluxe"
+                href="https://instagram.com/layeredluxe_by_vs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-1 hover:text-primary/80 transition-colors"
@@ -118,7 +119,7 @@ export default function Navigation() {
             {/* Contact Info - Left on larger screens */}
             <div className="flex items-center gap-6 text-sm">
               <a
-                href="tel:+919876543210"
+                href="tel:+919087095955"
                 className="flex items-center hover:text-primary/80 transition-colors"
               >
                 <svg
@@ -128,10 +129,10 @@ export default function Navigation() {
                 >
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span className="font-medium">Call: +91-98765-43210</span>
+                <span className="font-medium">Call: +91-90870-95955</span>
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919087095955"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:text-primary/80 transition-colors"
@@ -149,7 +150,7 @@ export default function Navigation() {
 
             {/* Social Links - Right aligned */}
             <div className="flex items-center gap-3">
-              <a
+              {/* <a
                 href="https://facebook.com/layeredluxe"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -162,9 +163,9 @@ export default function Navigation() {
                 >
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
-              </a>
+              </a> */}
               <a
-                href="https://instagram.com/layeredluxe"
+                href="https://instagram.com/layeredluxe_by_vs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-1 hover:text-primary/80 transition-colors"
@@ -182,7 +183,6 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Main Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
@@ -192,7 +192,7 @@ export default function Navigation() {
         style={{ top: "38px" }} // Account for announcement bar height
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-20 sm:h-28 items-center justify-between">
             {/* Mobile Hamburger - Left */}
             <div className="lg:hidden">
               <button
@@ -220,16 +220,13 @@ export default function Navigation() {
             {/* Logo - Left on desktop, Center on mobile */}
             <div className="flex items-center lg:justify-start justify-center flex-1 lg:flex-initial">
               <Link href="/" className="flex items-center space-x-3 group">
-                <div className="relative h-10 w-10 rounded-xl bg-accent flex items-center justify-center transition-all duration-300 group-hover:scale-105">
-                  <span className="text-lg font-bold text-primary">LL</span>
-                </div>
-                <div>
-                  <span className="font-bold text-lg text-text-primary">
-                    Layered Luxe
-                  </span>
-                  <div className="text-xs font-medium text-text-secondary">
-                    Premium Apparel
-                  </div>
+                <div className="scale-[150%] md:scale-[230%] relative h-12 w-12 rounded-lg overflow-hidden transition-all duration-300 group-hover:scale-[160%] md:group-hover:scale-[250%]">
+                  <Image
+                    src="/logo.png"
+                    alt="Layered Luxe"
+                    fill
+                    className="object-cover transform scale-200"
+                  />
                 </div>
               </Link>
             </div>
@@ -258,7 +255,7 @@ export default function Navigation() {
             </div>
 
             {/* Mobile spacer to center logo */}
-            <div className="lg:hidden w-12"></div>
+            <div className="lg:hidden w-14"></div>
           </div>
         </div>
       </nav>
@@ -274,16 +271,13 @@ export default function Navigation() {
           <div className="fixed top-0 left-0 h-full w-80 max-w-[80vw] bg-white shadow-2xl flex flex-col">
             <div className="flex items-center justify-between p-6 border-b border-gray-200 shrink-0">
               <div className="flex items-center space-x-3">
-                <div
-                  className="h-10 w-10 rounded-xl flex items-center justify-center"
-                  style={{ backgroundColor: "#F4A624" }}
-                >
-                  <span
-                    className="text-lg font-bold"
-                    style={{ color: "#0B2C57" }}
-                  >
-                    LL
-                  </span>
+                <div className="relative h-12 w-12 rounded-lg overflow-hidden">
+                  <Image
+                    src="/logo.png"
+                    alt="Layered Luxe"
+                    fill
+                    className="object-cover transform scale-125"
+                  />
                 </div>
                 <div>
                   <span
@@ -360,7 +354,7 @@ export default function Navigation() {
                 </h4>
                 <div className="space-y-3">
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919087095955"
                     className="flex items-center px-4 py-2 rounded-xl hover:bg-gray-100 transition-colors"
                     style={{ color: "#234D91" }}
                   >
@@ -371,10 +365,10 @@ export default function Navigation() {
                     >
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
-                    <span className="text-sm">Call: +91-98765-43210</span>
+                    <span className="text-sm">Call: +91-90870-95955</span>
                   </a>
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/919087095955"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center px-4 py-2 rounded-xl hover:bg-gray-100 transition-colors"
@@ -393,7 +387,7 @@ export default function Navigation() {
 
                 {/* Mobile Social Links */}
                 <div className="flex items-center justify-center gap-4 mt-6 pt-4 border-t border-gray-200">
-                  <a
+                  {/* <a
                     href="https://facebook.com/layeredluxe"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -410,9 +404,9 @@ export default function Navigation() {
                     >
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                     </svg>
-                  </a>
+                  </a> */}
                   <a
-                    href="https://instagram.com/layeredluxe"
+                    href="https://instagram.com/layeredluxe_by_vs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-xl transition-colors hover:bg-yellow-500"

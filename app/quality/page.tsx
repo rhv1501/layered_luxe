@@ -233,7 +233,7 @@ export default function QualityPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl bg-primary text-text-primary px-8 py-4 text-base font-semibold hover:bg-surface transition-all shadow-lg"
+              className="inline-flex items-center justify-center rounded-2xl bg-primary text-white px-8 py-4 text-base font-semibold hover:bg-surface transition-all shadow-lg"
             >
               Request Samples
             </Link>

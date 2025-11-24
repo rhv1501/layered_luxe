@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 import dynamic from "next/dynamic";
 
 const MotionDiv = dynamic(
@@ -8,11 +8,19 @@ const MotionDiv = dynamic(
   { ssr: false }
 );
 
-export default function Reveal({ children, delay = 0.2 }) {
+export default function Reveal({
+  children,
+  delay = 0.2,
+}: {
+  children: ReactNode;
+  delay?: number;
+}) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    // schedule mount on next frame to avoid synchronous state update inside effect
+    const raf = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(raf);
   }, []);
 
   if (!mounted) {
@@ -22,8 +30,8 @@ export default function Reveal({ children, delay = 0.2 }) {
 
   return (
     <MotionDiv
-      initial={{ opacity: 0, y: 40}}
-      whileInView={{ opacity: 1, y: 0}}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, delay }}
     >

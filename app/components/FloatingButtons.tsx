@@ -24,7 +24,7 @@ export default function FloatingButtons() {
       {/* Fixed WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919087095955"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 bg-[#3CCFC1] hover:bg-[#1E9DB4] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"

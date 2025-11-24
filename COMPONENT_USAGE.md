@@ -47,7 +47,7 @@ export default function CustomPage() {
     <ProductsGrid
       products={customProducts}
       whatsappMessage="Custom message for this page"
-      whatsappNumber="+919876543210"
+      whatsappNumber="+919087095955"
       className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4"
     />
   );
@@ -62,7 +62,7 @@ import { productsData } from "../data/products";
 
 export default function SingleProductExample() {
   const product = productsData[0]; // First product
-  const whatsappUrl = "https://wa.me/+919876543210?text=Hello";
+  const whatsappUrl = "https://wa.me/+919087095955?text=Hello";
 
   return (
     <div className="max-w-sm">

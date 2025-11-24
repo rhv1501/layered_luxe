@@ -1,20 +1,37 @@
+import Image from "next/image";
 import Link from "next/link";
 import { productsData } from "../data/products";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="border-t border-accent/20 bg-surface">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold text-text-primary">
-              Layered Luxe
-            </h3>
-            <p className="mt-2 text-sm text-text-secondary">
-              Complete uniform solutions for schools, colleges, corporates, and
-              sports teams across India.
+            <Link href="/" className="flex items-center gap-3">
+              <div className="relative h-10 w-10 rounded-md overflow-hidden scale-150">
+                <Image
+                  src="/logo.png"
+                  alt="Layered Luxe"
+                  fill
+                  className="object-cover scale-200"
+                />
+              </div>
+              <span className="font-bold text-lg text-text-primary">
+                Layered Luxe
+              </span>
+            </Link>
+
+            <p className="mt-4 text-sm text-text-secondary">
+              Layered Luxe is a premium bulk apparel manufacturer. We specialise
+              in custom T-shirts, uniforms, corporate wear, jerseys, hoodies,
+              and merchandise. With 13+ years of expertise across Indore,
+              Tiruppur, and Chennai, we deliver quality nationwide.
             </p>
+
             <div className="mt-4">
               <a
                 href="/catalogue.pdf"
@@ -92,22 +109,7 @@ export default function Footer() {
               Resources
             </h4>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link
-                  href="/testimonials#portfolio"
-                  className="text-sm text-text-secondary hover:text-text-primary"
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/testimonials"
-                  className="text-sm text-text-secondary hover:text-text-primary"
-                >
-                  Testimonials
-                </Link>
-              </li>
+              {/* Testimonials links removed per request (page retained for future use) */}
               <li>
                 <Link
                   href="/blog"
@@ -131,7 +133,7 @@ export default function Footer() {
         <div className="mt-8 border-t border-accent/20 pt-8">
           <div className="flex flex-col items-center justify-between md:flex-row">
             <p className="text-sm text-text-secondary">
-              © 2025 Layered Luxe. All rights reserved. Made in India.
+              © {year} Layered Luxe. All rights reserved. Made in India.
             </p>
             <div className="mt-4 flex space-x-6 md:mt-0">
               <a
@@ -142,17 +144,17 @@ export default function Footer() {
               </a>
               <span className="text-text-secondary/50">|</span>
               <a
-                href="tel:+91-XXXXXXXXXX"
+                href="tel:+919087095955"
                 className="text-sm text-text-secondary hover:text-text-primary"
               >
-                +91-XXXXXXXXXX
+                +91-90870-95955
               </a>
               <span className="text-text-secondary/50">|</span>
               <a
-                href="mailto:info@layeredluxe.com"
+                href="mailto:layeredluxe.vs@gmail.com"
                 className="text-sm text-text-secondary hover:text-text-primary"
               >
-                info@layeredluxe.com
+                layeredluxe.vs@gmail.com
               </a>
             </div>
           </div>

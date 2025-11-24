@@ -24,7 +24,7 @@ const blogPosts = [
     readTime: "5 min read",
     category: "Fabric Guide",
     image:
-      "https://images.unsplash.com/photo-1631248051267-d2f65e8d3f55?w=400&h=250&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1566827886031-7d0f288f76ed?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "school-tracksuit-guide",
@@ -35,7 +35,7 @@ const blogPosts = [
     readTime: "4 min read",
     category: "Buying Guide",
     image:
-      "https://images.unsplash.com/photo-1594736797933-d0500ba2fe65?w=400&h=250&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1603373577790-b635631b0302?q=80&w=1129&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "corporate-uniform-branding",
@@ -46,7 +46,7 @@ const blogPosts = [
     readTime: "6 min read",
     category: "Corporate",
     image:
-      "https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?w=400&h=250&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1762504366698-46550e162068?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "uniform-care-tips",
@@ -87,16 +87,16 @@ export default function BlogPage() {
           </Suspense>
 
           {/* Load More Section */}
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <button className="inline-flex items-center rounded-2xl bg-surface border-2 border-accent px-8 py-4 text-base font-semibold text-accent hover:bg-accent hover:text-primary transition-all shadow-sm">
               Load More Articles
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-surface">
+      {/* <section className="py-20 bg-surface">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center bg-accent rounded-3xl p-12 text-primary border border-accent/50">
             <h2 className="font-heading text-3xl font-bold lg:text-4xl">
@@ -118,7 +118,7 @@ export default function BlogPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-background">

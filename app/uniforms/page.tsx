@@ -286,7 +286,7 @@ export default function UniformsPage() {
               <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-2xl bg-primary px-10 py-5 text-lg font-semibold text-text-primary hover:bg-surface transition-all shadow-xl hover:shadow-2xl hover:scale-105"
+                  className="inline-flex items-center justify-center rounded-2xl bg-primary px-10 py-5 text-lg font-semibold text-white hover:bg-surface transition-all shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   Get Your Quote
                   <svg
