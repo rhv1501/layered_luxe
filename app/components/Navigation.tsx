@@ -226,6 +226,7 @@ export default function Navigation() {
                     alt="Layered Luxe"
                     fill
                     className="object-cover transform scale-200"
+                    fetchPriority="high"
                   />
                 </div>
               </Link>
