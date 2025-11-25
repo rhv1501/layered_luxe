@@ -1,7 +1,4 @@
 User-agent: *
-Disallow:
-
+Allow: /
 
 Sitemap: https://thelayeredluxe.com/sitemap.xml
-
-Crawl-delay: 10
