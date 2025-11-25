@@ -2,7 +2,7 @@ import { productsData } from "@/app/data/products";
 import { blogPosts } from "@/app/data/blogPosts";
 
 export default function sitemap() {
-  const baseUrl = "https://thelayeredluxe.com";
+  const baseUrl = "https://www.thelayeredluxe.com";
 
   // Static pages
   const staticPages = [

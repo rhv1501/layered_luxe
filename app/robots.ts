@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       crawlDelay: 10,
     },
-    sitemap: "https://thelayeredluxe.com/sitemap.xml",
+    sitemap: "https://www.thelayeredluxe.com/sitemap.xml",
   };
 }
