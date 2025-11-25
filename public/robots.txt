@@ -1,8 +1,7 @@
 User-agent: *
 Disallow:
 
-# Sitemap location (change to absolute URL after deploy if needed)
-Sitemap: /sitemap.xml
 
-# Crawl-delay can be added for polite crawling (uncomment to enable)
-# Crawl-delay: 10
+Sitemap: https://thelayeredluxe.com/sitemap.xml
+
+Crawl-delay: 10
