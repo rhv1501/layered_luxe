@@ -66,7 +66,7 @@ export default function Home() {
                           <div className="relative text-center text-primary">
                             <div className="flex items-center justify-center mb-4">
                               <div className="text-6xl sm:text-7xl font-black">
-                                500
+                                100
                               </div>
                               <div className="text-2xl sm:text-3xl font-bold text-accent ml-2">
                                 +
@@ -129,7 +129,7 @@ export default function Home() {
                           <div className="text-center text-white">
                             <div className="flex items-center justify-center mb-3">
                               <div className="text-4xl sm:text-5xl font-black">
-                                5
+                                13
                               </div>
                               <div className="text-lg sm:text-xl font-bold ml-1">
                                 +
@@ -272,7 +272,7 @@ export default function Home() {
                       <div className="relative">
                         <div className="bg-linear-to-r from-accent to-accent/80 p-8 rounded-3xl text-center transform -rotate-1 hover:rotate-0 transition-transform duration-300 shadow-lg">
                           <div className="text-5xl font-bold mb-2 text-primary">
-                            500+
+                            100+
                           </div>
                           <div className="text-primary font-semibold">
                             Happy Clients Worldwide
@@ -289,7 +289,7 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="bg-royal text-white p-6 rounded-2xl text-center transform -rotate-2 hover:rotate-0 transition-transform duration-300 shadow-lg">
-                          <div className="text-3xl font-bold mb-2">5+</div>
+                          <div className="text-3xl font-bold mb-2">13+</div>
                           <div className="text-sm font-medium">
                             Years Experience
                           </div>
@@ -829,7 +829,7 @@ export default function Home() {
                       <div className="grid grid-cols-3 gap-4 text-center text-primary">
                         <div>
                           <div className="text-2xl font-bold text-accent">
-                            500+
+                            100+
                           </div>
                           <div className="text-sm opacity-90">
                             Designs Created
