@@ -10,8 +10,8 @@ export default function Navigation() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Uniforms", href: "/uniforms" },
     { name: "Products", href: "/products" },
+    { name: "Uniforms", href: "/uniforms" },
     // Fabrics temporarily removed from nav (folder retained for future use)
     { name: "Quality", href: "/quality" },
     { name: "Order Process", href: "/customisation" },

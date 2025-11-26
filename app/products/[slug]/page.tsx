@@ -8,16 +8,7 @@ const productData = {
     slug: "polo-neck-tshirts",
     description:
       "Premium-quality customised polo neck T-shirts designed for men. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
-    features: [
-      "100% Premium Cotton Material",
-      "Collar & Sleeve Customization",
-      "Logo Printing & Embroidery",
-      "Multiple Color Options",
-      "Size Range: S to 4XL",
-      "GSM Options: 160-220",
-      "Quick Turnaround (5-7 days)",
-      "Bulk Order Discounts",
-    ],
+    features: ["Nirmal Knit", "Mars", "100% Cotton", "Lacoste"],
     specifications: {
       material: "100% Cotton / Cotton Blend",
       gsm: "160-220 GSM",
@@ -39,16 +30,7 @@ const productData = {
     slug: "round-neck-tshirts",
     description:
       "High-quality customised round neck T-shirts for casual, event, or promotional use. Soft, breathable fabric with vibrant printing options including screen, DTF, and sublimation. Ideal for brands, startups, and college events.",
-    features: [
-      "Soft Cotton Fabric",
-      "Vibrant Print Quality",
-      "Lightweight & Breathable",
-      "DTF & Screen Printing",
-      "Sublimation Options",
-      "Event & Promotional Use",
-      "Custom Design Support",
-      "Fast Delivery",
-    ],
+    features: ["Nirmal Knit", "Mars", "100% Cotton", "Lacoste"],
     specifications: {
       material: "Cotton / Polyester Blend",
       gsm: "140-180 GSM",
@@ -95,19 +77,30 @@ const productData = {
     description:
       "Premium-quality school uniforms tailored for comfort, durability, and a smart appearance. Perfect for schools, academies, and institutions seeking custom-designed shirts, pants, skirts, and sportswear. Available with embroidery or logo printing for a professional identity.",
     features: [
-      "Durable Cotton & Polyester Fabric",
-      "Custom Logo Embroidery",
-      "Complete Uniform Sets",
-      "Tailored Fit for Comfort",
-      "Wrinkle-Resistant Material",
-      "Machine Washable",
-      "Color-Fast Dyes",
-      "Institutional Branding",
-      "Sports & PE Uniforms",
-      "Formal & Casual Options",
-      "Size Range for All Ages",
-      "Bulk Order Benefits",
+      "100% Cotton – Rs. 275",
+      "Nirmal Knit Polyester – Rs. 215",
+      "Spun Nirmal Knit – Rs. 225",
+      "Mars Baby Pique – Rs. 225",
+      "Poly Cotton – Rs. 250",
+      "Honey Comb – Rs. 200",
+      "Dot Knit – Rs. 195",
+      "Way Lycra – Rs. 275",
+      "Superpoly – Rs. 215",
     ],
+    // features: [
+    //   "Durable Cotton & Polyester Fabric",
+    //   "Custom Logo Embroidery",
+    //   "Complete Uniform Sets",
+    //   "Tailored Fit for Comfort",
+    //   "Wrinkle-Resistant Material",
+    //   "Machine Washable",
+    //   "Color-Fast Dyes",
+    //   "Institutional Branding",
+    //   "Sports & PE Uniforms",
+    //   "Formal & Casual Options",
+    //   "Size Range for All Ages",
+    //   "Bulk Order Benefits",
+    // ],
     specifications: {
       material: "Cotton Blend / Polyester",
       gsm: "140-180 GSM",
@@ -148,16 +141,7 @@ const productData = {
     slug: "custom-hoodies-jackets",
     description:
       "Stay warm in style with customised hoodies and jackets. Perfect for corporate gifting, winter campaigns, and team branding. Available in cotton fleece, polyester, and zipper styles with embroidered or printed logos.",
-    features: [
-      "Premium Fleece Material",
-      "Zipper & Pullover Options",
-      "Corporate Gifting Ready",
-      "Embroidered Logos",
-      "Winter Campaign Suitable",
-      "Team Branding Options",
-      "Multiple Colors",
-      "Custom Sizing",
-    ],
+    features: ["Loopknit Cotton Hoodies", "Jacket (Imported Fabric)"],
     specifications: {
       material: "Cotton Fleece / Polyester",
       gsm: "280-320 GSM",
@@ -175,31 +159,31 @@ const productData = {
       "/jacket/07.png",
     ],
   },
-  "promotional-tshirts": {
-    title: "Promotional T-Shirts for Events & Brands",
-    slug: "promotional-tshirts",
-    description:
-      "Affordable promotional T-shirts ideal for marketing campaigns, giveaways, college fests, and product launches. Lightweight cotton fabric with high-quality printing for maximum brand visibility and comfort.",
-    features: [
-      "Budget-Friendly Pricing",
-      "Marketing Campaign Ready",
-      "College Fest Suitable",
-      "Product Launch Events",
-      "High-Quality Printing",
-      "Maximum Brand Visibility",
-      "Lightweight Comfort",
-      "Bulk Order Benefits",
-    ],
-    specifications: {
-      material: "Cotton / Cotton Blend",
-      gsm: "140-160 GSM",
-      sizes: "S, M, L, XL, 2XL, 3XL",
-      colors: "10+ Colors Available",
-      printing: "Screen Print, DTF",
-      moq: "Minimum 50 pieces",
-    },
-    gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
-  },
+  // "promotional-tshirts": {
+  //   title: "Promotional T-Shirts for Events & Brands",
+  //   slug: "promotional-tshirts",
+  //   description:
+  //     "Affordable promotional T-shirts ideal for marketing campaigns, giveaways, college fests, and product launches. Lightweight cotton fabric with high-quality printing for maximum brand visibility and comfort.",
+  //   features: [
+  //     "Budget-Friendly Pricing",
+  //     "Marketing Campaign Ready",
+  //     "College Fest Suitable",
+  //     "Product Launch Events",
+  //     "High-Quality Printing",
+  //     "Maximum Brand Visibility",
+  //     "Lightweight Comfort",
+  //     "Bulk Order Benefits",
+  //   ],
+  //   specifications: {
+  //     material: "Cotton / Cotton Blend",
+  //     gsm: "140-160 GSM",
+  //     sizes: "S, M, L, XL, 2XL, 3XL",
+  //     colors: "10+ Colors Available",
+  //     printing: "Screen Print, DTF",
+  //     moq: "Minimum 50 pieces",
+  //   },
+  //   gallery: ["/file.svg", "/file.svg", "/file.svg", "/file.svg"],
+  // },
 };
 
 export default async function ProductPage({
@@ -277,7 +261,7 @@ export default async function ProductPage({
             {/* Product Features */}
             <div>
               <h3 className="text-xl font-bold text-text-primary mb-4">
-                Key Features
+                Types
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {product.features.map((feature, index) => (
@@ -285,7 +269,7 @@ export default async function ProductPage({
                     key={index}
                     className="flex items-center space-x-3 p-3 bg-white rounded-xl shadow-sm border border-gray-100"
                   >
-                    <div className="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
+                    {/* <div className="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
                       <svg
                         className="w-4 h-4 text-accent"
                         fill="currentColor"
@@ -297,7 +281,7 @@ export default async function ProductPage({
                           clipRule="evenodd"
                         />
                       </svg>
-                    </div>
+                    </div> */}
                     <span className="text-text-secondary text-sm">
                       {feature}
                     </span>
