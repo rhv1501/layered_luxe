@@ -589,7 +589,9 @@ export default function Home() {
               <div className="text-center mt-16 sm:mt-20">
                 <div className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-accent rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                   <span className="text-primary font-semibold">
-                    Ready to start manufacturing?
+                    <Link href="/products" target="__blank">
+                      Ready to start manufacturing?
+                    </Link>
                   </span>
                   <svg
                     className="w-5 h-5 text-primary"
@@ -1112,7 +1114,7 @@ export default function Home() {
                         <div className="absolute inset-0 bg-black/40" />
                         <div className="relative z-10 flex items-center justify-center p-4">
                           <span className="text-sm font-medium text-white text-center">
-                            Batch Printing
+                            Wowen Badge Printing
                           </span>
                         </div>
                       </div>

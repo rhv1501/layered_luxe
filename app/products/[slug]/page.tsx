@@ -4,7 +4,7 @@ import ProductGallery from "../../components/ProductGallery";
 
 const productData = {
   "polo-neck-tshirts": {
-    title: "Custom Polo Neck T-Shirts for Men",
+    title: "Corporate T shirts",
     slug: "polo-neck-tshirts",
     description:
       "Premium-quality customised polo neck T-shirts designed for men. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
@@ -58,7 +58,7 @@ const productData = {
     ],
     specifications: {
       material: "Cotton Blend / Polyester",
-      gsm: "120-160 GSM",
+      gsm: "140-240 GSM",
       sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
       colors: "Corporate Colors Available",
       printing: "Embroidery, Heat Transfer",
@@ -77,15 +77,12 @@ const productData = {
     description:
       "Premium-quality school uniforms tailored for comfort, durability, and a smart appearance. Perfect for schools, academies, and institutions seeking custom-designed shirts, pants, skirts, and sportswear. Available with embroidery or logo printing for a professional identity.",
     features: [
-      "100% Cotton – Rs. 275",
-      "Nirmal Knit Polyester – Rs. 215",
-      "Spun Nirmal Knit – Rs. 225",
-      "Mars Baby Pique – Rs. 225",
-      "Poly Cotton – Rs. 250",
-      "Honey Comb – Rs. 200",
-      "Dot Knit – Rs. 195",
-      "Way Lycra – Rs. 275",
-      "Superpoly – Rs. 215",
+      "100% Cotton/ Poly Cotton",
+      "Nirmal Knit/ Spun Nirmal Knit",
+      "Mars Baby Pique",
+      "Dot Knit/ Honey Comb",
+      "Four Way Lycra",
+      "Superpoly",
     ],
     // features: [
     //   "Durable Cotton & Polyester Fabric",
@@ -102,12 +99,11 @@ const productData = {
     //   "Bulk Order Benefits",
     // ],
     specifications: {
-      material: "Cotton Blend / Polyester",
-      gsm: "140-180 GSM",
+      gsm: "140-240",
       sizes: "Age 3-18, Adult S-4XL",
-      colors: "School Colors Available",
-      printing: "Embroidery, Screen Print, Heat Transfer",
-      moq: "Minimum 25 pieces",
+      printing: "Embroidery, Screen Print, DTF",
+      moq: "Minimum 50 pieces",
+      colours: "All Colors Available",
     },
     gallery: ["/uniform/03.png", "/uniform/02.png", "/uniform/01.png"],
   },

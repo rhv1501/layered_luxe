@@ -1,9 +1,23 @@
 import { Product } from "../components/ProductCard";
 
 export const productsData: Product[] = [
+    {
+  id: "School Uniforms",
+  title: "Custom School Uniforms",
+  slug: "school-uniforms",
+  image: "/uniform/03.png",
+  description:
+    "Premium-quality school uniforms tailored for comfort, durability, and a smart appearance. Perfect for schools, academies, and institutions seeking custom-designed shirts, pants, skirts, and sportswear. Available with embroidery or logo printing for a professional identity.",
+  features: [
+    "Durable Cotton & Polyester Fabric",
+    "Custom Logo Embroidery",
+    "Complete Uniform Sets",
+    "Tailored Fit for Comfort",
+  ],
+},
   {
     id: "Customised polo neck tees",
-    title: "Custom Polo Neck T-Shirts for Men",
+    title: "Customised Polo Neck T-Shirts",
     slug: "polo-neck-tshirts",
     image: "/poloneck/01.jpg",
     description:
@@ -43,20 +57,7 @@ export const productsData: Product[] = [
       "Comfort Fit",
     ],
   },
-  {
-  id: "School Uniforms",
-  title: "Custom School Uniforms",
-  slug: "school-uniforms",
-  image: "/uniform/03.png",
-  description:
-    "Premium-quality school uniforms tailored for comfort, durability, and a smart appearance. Perfect for schools, academies, and institutions seeking custom-designed shirts, pants, skirts, and sportswear. Available with embroidery or logo printing for a professional identity.",
-  features: [
-    "Durable Cotton & Polyester Fabric",
-    "Custom Logo Embroidery",
-    "Complete Uniform Sets",
-    "Tailored Fit for Comfort",
-  ],
-},
+
 {
     id: "jerseys",
     title: "Custom Jerseys",

@@ -95,7 +95,7 @@ export const customizationTechniques: CustomizationTechnique[] = [
 },
 {
   id: "batch-printing",
-  title: "Batch Printing",
+  title: "Woven Badges",
   image: "/batch.webp",
   summary: "Batch printing delivers consistent, high-quality prints for large-volume orders with efficient turnaround.",
   description:

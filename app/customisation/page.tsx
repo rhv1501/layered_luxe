@@ -1,6 +1,6 @@
 "use client";
 
-import Stepper from "../components/Stepper";
+// import Stepper from "../components/Stepper";
 import FabricSwatches from "../components/FabricSwatches";
 import { customizationTechniques } from "../data/customizationTechniques";
 import Image from "next/image";
@@ -34,7 +34,7 @@ export default function CustomisationPage() {
       ],
     },
     {
-      title: "Fit & Sizing",
+      title: "Design Finalization",
       description:
         "Tailored fits for every body type and professional requirement",
       icon: "📏",
@@ -46,7 +46,7 @@ export default function CustomisationPage() {
       ],
     },
     {
-      title: "Fabric Selection",
+      title: "Fabric & Style Selection",
       description:
         "Premium fabrics sourced globally for durability and comfort",
       icon: "🧵",
@@ -58,7 +58,7 @@ export default function CustomisationPage() {
       ],
     },
     {
-      title: "Design Consultation",
+      title: "RequirementDiscussion",
       description: "Work with our design team to create the perfect uniform",
       icon: "🎨",
       features: [
@@ -101,9 +101,9 @@ export default function CustomisationPage() {
             </p>
           </div>
 
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Stepper steps={steps} current={2} />
-          </div>
+          </div> */}
 
           {/* Process Details */}
           <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-5">
@@ -115,9 +115,11 @@ export default function CustomisationPage() {
                 <h3 className="mt-4 font-semibold text-text-primary">{step}</h3>
                 <p className="mt-2 text-sm text-text-secondary">
                   {index === 0 &&
-                    "Understand your requirements and brand vision"}
-                  {index === 1 && "Select materials and finalize designs"}
-                  {index === 2 && "Create samples for your approval"}
+                    "Understanding fabric, quantity, design, purpose, colors, budget"}
+                  {index === 1 &&
+                    "Choosing fabric type, style, GSM, colors, and printing method"}
+                  {index === 2 &&
+                    "Submitting logo or design files; minor adjustments if needed"}
                   {index === 3 && "Scale production with quality control"}
                   {index === 4 && "Timely delivery and support"}
                 </p>

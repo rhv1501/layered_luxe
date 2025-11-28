@@ -24,7 +24,7 @@ export default function UniformsPage() {
       description:
         "Professional shirts, trousers, ties, and accessories for a polished corporate image.",
       image: "/corporate.png",
-      href: "/products/corporate-shirts-pants",
+      href: "/products/polo-neck-tshirts",
     },
     {
       id: "school",
