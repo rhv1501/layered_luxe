@@ -26,7 +26,7 @@ const productData = {
     ],
   },
   "round-neck-tshirts": {
-    title: "Custom Round Neck T-Shirts",
+    title: "Customised Round Neck T-Shirts",
     slug: "round-neck-tshirts",
     description:
       "High-quality customised round neck T-shirts for casual, event, or promotional use. Soft, breathable fabric with vibrant printing options including screen, DTF, and sublimation. Ideal for brands, startups, and college events.",
@@ -133,7 +133,7 @@ const productData = {
     gallery: ["/Jersey/02.png", "/Jersey/01.png", "/Jersey/03.png"],
   },
   "custom-hoodies-jackets": {
-    title: "Custom Hoodies & Jackets",
+    title: "Customised Hoodies & Jackets",
     slug: "custom-hoodies-jackets",
     description:
       "Stay warm in style with customised hoodies and jackets. Perfect for corporate gifting, winter campaigns, and team branding. Available in cotton fleece, polyester, and zipper styles with embroidered or printed logos.",

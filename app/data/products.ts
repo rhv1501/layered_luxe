@@ -3,7 +3,7 @@ import { Product } from "../components/ProductCard";
 export const productsData: Product[] = [
     {
   id: "School Uniforms",
-  title: "Custom School Uniforms",
+  title: "Customised School Uniforms",
   slug: "school-uniforms",
   image: "/uniform/03.png",
   description:
@@ -31,7 +31,7 @@ export const productsData: Product[] = [
   },
   {
     id: "Customised round neck tees",
-    title: "Custom Round Neck T-Shirts",
+    title: "Customised Round Neck T-Shirts",
     slug: "round-neck-tshirts",
     image: "/roundneck/2.png",
     description:

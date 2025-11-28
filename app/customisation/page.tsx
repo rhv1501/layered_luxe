@@ -126,7 +126,7 @@ export default function CustomisationPage() {
                   {index === 4 &&
                     "Checking stitching, color, logo alignment, size and fabric finishing"}
                   {index === 5 &&
-                    "Delivering the complete ordor within the specified timeline"}
+                    "Delivering the complete order within the specified timeline"}
                 </p>
               </div>
             ))}
