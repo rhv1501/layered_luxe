@@ -13,11 +13,12 @@ export default function CustomisationPage() {
     setExpandedCard(expandedCard === id ? null : id);
   };
   const steps = [
-    "Consultation",
-    "Fabric & Design",
-    "Sample Approval",
-    "Bulk Production",
-    "Delivery",
+    "RequirementDiscussion",
+    "Fabric & Style Selection",
+    "Design Finalization",
+    "Production Begins",
+    "Final Quality Check",
+    "Delivery / Dispatch",
   ];
 
   const customizationFeatures = [
@@ -34,7 +35,7 @@ export default function CustomisationPage() {
       ],
     },
     {
-      title: "Design Finalization",
+      title: "Tailored Fits",
       description:
         "Tailored fits for every body type and professional requirement",
       icon: "📏",
@@ -120,8 +121,12 @@ export default function CustomisationPage() {
                     "Choosing fabric type, style, GSM, colors, and printing method"}
                   {index === 2 &&
                     "Submitting logo or design files; minor adjustments if needed"}
-                  {index === 3 && "Scale production with quality control"}
-                  {index === 4 && "Timely delivery and support"}
+                  {index === 3 &&
+                    "Cutting, stitching, pinting, embroidery, and quality check in-house"}
+                  {index === 4 &&
+                    "Checking stitching, color, logo alignment, size and fabric finishing"}
+                  {index === 5 &&
+                    "Delivering the complete ordor within the specified timeline"}
                 </p>
               </div>
             ))}
