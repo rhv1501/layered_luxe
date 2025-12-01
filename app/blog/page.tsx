@@ -8,6 +8,14 @@ const SectionLoader = () => (
     <Loader />
   </div>
 );
+export const metadata = {
+  title: "The Layered Luxe-Blogs & Insights",
+  description:
+    "Stay updated with expert advice on uniforms, fabrics, and styling for institutions, teams, and professional environments.",
+  alternates: {
+    canonical: "https://thelayeredluxe.com/blog",
+  },
+};
 
 // Lazy load the blog grid
 const BlogGrid = dynamic(() => import("../components/BlogGrid"), {

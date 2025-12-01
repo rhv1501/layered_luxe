@@ -1,6 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
+export const metadata = {
+  title: "The Layered Luxe-Quality & Standards",
+  description:
+    "Premium materials and world-class craftsmanship that set us apart in the global apparel manufacturing industry",
+  alternates: {
+    canonical: "https://thelayeredluxe.com/quality",
+  },
+};
 export default function QualityPage() {
   return (
     <div className="bg-background">

@@ -5,6 +5,14 @@ import FabricSwatches from "../components/FabricSwatches";
 import { customizationTechniques } from "../data/customizationTechniques";
 import Image from "next/image";
 import React from "react";
+export const metadata = {
+  title: "The Layered Luxe-Customisation Services",
+  description:
+    "Discover The Layered Luxe's bespoke customisation services for uniforms and apparel. From fabric selection to logo embroidery, we tailor solutions to your brand's needs.",
+  alternates: {
+    canonical: "https://thelayeredluxe.com/customisation",
+  },
+};
 
 export default function CustomisationPage() {
   const [expandedCard, setExpandedCard] = React.useState<string | null>(null);

@@ -2,6 +2,21 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProductGallery from "../../components/ProductGallery";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  return {
+    title: `The Layered Luxe – ${slug}`,
+    alternates: {
+      canonical: `https://thelayeredluxe.com/products/${slug}`,
+    },
+  };
+}
+
 const productData = {
   "polo-neck-tshirts": {
     title: "Corporate T shirts",

@@ -10,6 +10,15 @@ const SectionLoader = () => (
   </div>
 );
 
+export const metadata = {
+  title: "The Layered Luxe-uniforms & Apparel Solutions",
+  description:
+    "From corporate attire to school uniforms, discover our high-quality, customizable uniform solutions tailored to your brand's needs.",
+  alternates: {
+    canonical: "https://thelayeredluxe.com/quality",
+  },
+};
+
 // Lazy load the uniforms grid
 const UniformsGrid = dynamic(() => import("../components/UniformsGrid"), {
   loading: () => <SectionLoader />,

@@ -5,8 +5,20 @@ import { blogPosts } from "@/app/data/blogPosts";
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
 };
+export async function generateMetadata({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+
+  return {
+    title: `The Layered Luxe – ${slug}`,
+    alternates: {
+      canonical: `https://thelayeredluxe.com/blog/${slug}`,
+    },
+  };
+}
+
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
+
   const { slug } = await params;
   const post = blogPosts[slug as keyof typeof blogPosts];
 
@@ -128,3 +140,4 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </div>
   );
 }
+

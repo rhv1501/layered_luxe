@@ -17,6 +17,14 @@ const TestimonialsSection = dynamic(
     ),
   }
 );
+export const metadata = {
+  title: "The Layered Luxe",
+  description:
+    "Premium apparel manufacturing and custom uniform solutions for schools and corporations in India.",
+  alternates: {
+    canonical: "https://thelayeredluxe.com/",
+  },
+};
 
 export default function Home() {
   return (

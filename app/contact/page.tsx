@@ -13,6 +13,14 @@ const FormLoader = () => (
 const ContactForm = dynamic(() => import("../components/ContactForm"), {
   loading: () => <FormLoader />,
 });
+export const metadata = {
+  title: "The Layered Luxe-Contact Us",
+  description:
+    "Have questions or need a custom quote? Reach out to The Layered Luxe team for personalized assistance with your school uniform,corporate uniforms, tshirt and apparel needs.",
+  alternates: {
+    canonical: "https://thelayeredluxe.com/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
