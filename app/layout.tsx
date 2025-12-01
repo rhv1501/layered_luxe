@@ -73,6 +73,20 @@ export default function RootLayout({
           href="/favicon_io/apple-touch-icon.png"
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
+        <script
+          type="application/ld+json"
+          // JSON-LD for Organization with Instagram profile
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Layered Luxe",
+              url: "https://www.thelayeredluxe.com",
+              logo: "https://www.thelayeredluxe.com/favicon_io/favicon-32x32.png",
+              sameAs: ["https://instagram.com/layeredluxe.vs"],
+            }),
+          }}
+        />
       </head>
       <body
         className={`${inter.variable} ${poppins.variable} ${dmSans.variable} font-sans antialiased bg-background text-text-primary`}
