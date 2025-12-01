@@ -1,3 +1,10 @@
 {
-  "rewrites": [{ "source": "/robots.txt", "destination": "/robots" }]
+  "rewrites": [{ "source": "/robots.txt", "destination": "/robots" }],
+  "redirects": [
+    {
+      "source": "/robots.txt",
+      "destination": "/robots",
+      "permanent": false
+    }
+  ]
 }
