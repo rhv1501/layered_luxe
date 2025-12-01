@@ -1,0 +1,33 @@
+# Layered Luxe - LLMS Guidance
+
+purpose: Guidance for large language models (LLMs) and automated agents about acceptable use of site content.
+
+site_name: Layered Luxe
+url: https://www.thelayeredluxe.com
+description: Premium apparel manufacturing in India — T-shirts, hoodies, workwear, and more.
+
+contact: layeredluxe.vs@gmail.com
+sitemap: https://www.thelayeredluxe.com/sitemap.xml
+
+license: |
+  Content on this site is © Layered Luxe. Publicly accessible text and media may be used for
+  non-commercial research, analysis, and indexing provided attribution is given (link back to
+  https://www.thelayeredluxe.com). Commercial reuse requires prior written permission from
+  the site owner (contact above).
+
+allowed:
+  - Public HTML content (page text, product descriptions, blog posts)
+  - Public images and media stored under /public/ (use absolute URL when referencing)
+  - Metadata, sitemaps, and public structured data (JSON-LD)
+
+disallowed:
+  - Private user data (orders, account information)
+  - Any API responses or endpoints behind authentication
+  - Contact details scraped for marketing without permission
+
+notes: |
+  - If you are an LLM provider or researcher using this site for model training or indexing,
+    please attribute Layered Luxe and respect the 'disallowed' constraints above.
+  - For permission requests or commercial licensing, contact: layeredluxe.vs@gmail.com
+
+updated: 2025-12-02

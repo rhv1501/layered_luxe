@@ -87,6 +87,29 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          // JSON-LD for LocalBusiness with address and phone numbers
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Layered Luxe",
+              url: "https://www.thelayeredluxe.com",
+              telephone: [
+                "+91-90870-95955",
+                "+91-90479-99633"
+              ],
+              email: "layeredluxe.vs@gmail.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Kilpauk",
+                addressRegion: "Tamil Nadu",
+                addressCountry: "IN"
+              },
+            }),
+          }}
+        />
       </head>
       <body
         className={`${inter.variable} ${poppins.variable} ${dmSans.variable} font-sans antialiased bg-background text-text-primary`}
