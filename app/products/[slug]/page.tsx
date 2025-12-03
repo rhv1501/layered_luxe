@@ -22,15 +22,15 @@ const productData = {
     title: "Corporate T shirts",
     slug: "polo-neck-tshirts",
     description:
-      "Premium-quality customised polo neck T-shirts designed for men. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
+      "Premium-quality customised polo neck T-shirts designed for men and women. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
     features: ["Nirmal Knit", "Mars", "100% Cotton", "Lacoste"],
     specifications: {
       material: "100% Cotton / Cotton Blend",
-      gsm: "160-220 GSM",
+      gsm: "140-240-220 GSM",
       sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
       colors: "20+ Colors Available",
       printing: "Screen Print, DTF, Embroidery",
-      moq: "Minimum 25 pieces",
+      moq: "Minimum 50 pieces",
     },
     gallery: [
       "/poloneck/01.jpg",
@@ -44,7 +44,7 @@ const productData = {
     title: "Customised Round Neck T-Shirts",
     slug: "round-neck-tshirts",
     description:
-      "High-quality customised round neck T-shirts for casual, event, or promotional use. Soft, breathable fabric with vibrant printing options including screen, DTF, and sublimation. Ideal for brands, startups, and college events.",
+      "High-quality customised round neck T-shirts for Corporates, event, or promotional use. Soft, breathable fabric with vibrant printing options including screen, DTF, and sublimation. Ideal for brands, startups, and college events.",
     features: ["Nirmal Knit", "Mars", "100% Cotton", "Lacoste"],
     specifications: {
       material: "Cotton / Polyester Blend",
@@ -52,24 +52,20 @@ const productData = {
       sizes: "S, M, L, XL, 2XL, 3XL",
       colors: "15+ Colors Available",
       printing: "DTF, Screen Print, Sublimation",
-      moq: "Minimum 20 pieces",
+      moq: "Minimum 50 pieces",
     },
     gallery: ["/window.svg", "/window.svg", "/window.svg", "/window.svg"],
   },
   "corporate-shirts-pants": {
-    title: "Corporate Uniforms – Shirts & Pants",
+    title: "Corporate Uniforms",
     slug: "corporate-shirts-pants",
     description:
       "Professional corporate shirts and pants tailored for comfort and style. Perfect for offices, hospitality, and formal workwear. Available in multiple fits, colors, and branding options for a polished team look.",
     features: [
-      "Professional Tailoring",
-      "Comfort Fit Design",
-      "Wrinkle-Free Fabric",
-      "Corporate Branding",
-      "Multiple Fits Available",
-      "Hospitality Grade Quality",
-      "Coordinated Sets",
-      "Bulk Pricing",
+      "Formal Office Wear - suits,blazers,dress,shirts",
+      "Casual Office Wear - polos,t-shirts",
+      "Industrial and safety wear",
+      "All other bulk speciality uniforms",
     ],
     specifications: {
       material: "Cotton Blend / Polyester",
@@ -77,7 +73,7 @@ const productData = {
       sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
       colors: "Corporate Colors Available",
       printing: "Embroidery, Heat Transfer",
-      moq: "Minimum 30 pieces",
+      moq: "Minimum 50 pieces",
     },
     gallery: [
       "/shirtpant/01.png",
@@ -90,7 +86,7 @@ const productData = {
     title: "Custom School Uniforms",
     slug: "school-uniforms",
     description:
-      "Premium-quality school uniforms tailored for comfort, durability, and a smart appearance. Perfect for schools, academies, and institutions seeking custom-designed shirts, pants, skirts, and sportswear. Available with embroidery or logo printing for a professional identity.",
+      "Premium-quality school uniforms tailored for comfort, durability, and a smart appearance. Perfect for schools, academies, Play schools and institutions seeking custom-designed shirts, pants, skirts, and sportswear. Available with embroidery or logo printing for a professional identity.",
     features: [
       "100% Cotton/ Poly Cotton",
       "Nirmal Knit/ Spun Nirmal Knit",
@@ -128,8 +124,8 @@ const productData = {
     description:
       "Personalised sports jerseys crafted for teams, tournaments, and fitness events. Choose from Dri-FIT, mesh, or polyester materials with full sublimation printing. Add names, numbers, and logos to showcase your team spirit.",
     features: [
-      "Dri-FIT Technology",
-      "Mesh Ventilation",
+      "Salina  Dri-FIT",
+      "Dot Knit",
       "Full Sublimation Printing",
       "Name & Number Customization",
       "Team Logo Integration",
@@ -139,11 +135,11 @@ const productData = {
     ],
     specifications: {
       material: "Polyester Mesh / Dri-FIT",
-      gsm: "130-160 GSM",
+      gsm: "140-180 GSM",
       sizes: "S, M, L, XL, 2XL, 3XL",
-      colors: "Full Color Sublimation",
+      colors: "15+ Colors Available",
       printing: "Sublimation, Heat Press",
-      moq: "Minimum 15 pieces",
+      moq: "Minimum 50 pieces",
     },
     gallery: ["/Jersey/02.png", "/Jersey/01.png", "/Jersey/03.png"],
   },
@@ -155,11 +151,11 @@ const productData = {
     features: ["Loopknit Cotton Hoodies", "Jacket (Imported Fabric)"],
     specifications: {
       material: "Cotton Fleece / Polyester",
-      gsm: "280-320 GSM",
+      gsm: "140-240 GSM",
       sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
       colors: "12+ Colors Available",
       printing: "Embroidery, Screen Print",
-      moq: "Minimum 25 pieces",
+      moq: "Minimum 50 pieces",
     },
     gallery: [
       "/jacket/02.png",

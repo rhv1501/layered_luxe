@@ -64,7 +64,7 @@ export default function UniformsPage() {
             Our Uniform Solutions
           </h1>
           <p className="text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
-            From corporate attire to healthcare scrubs, we manufacture
+            From corporate attire to School Uniforms, we manufacture
             high-quality uniforms for every industry.
           </p>
         </div>

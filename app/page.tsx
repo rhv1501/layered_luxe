@@ -981,7 +981,7 @@ export default function Home() {
                       </div>
                       <p className="text-text-secondary">
                         Multiple decoration techniques — embroidery, screen
-                        Printing printing, 3D embossing, sublimation, DTF
+                        Printing, 3D embossing, sublimation, DTF
                         printing, and more.
                       </p>
                     </div>

@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function CustomisationPage() {
   const steps = [
-    "RequirementDiscussion",
+    "Requirement Discussion",
     "Fabric & Style Selection",
     "Design Finalization",
     "Production Begins",
