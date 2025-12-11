@@ -26,7 +26,7 @@ const productData = {
     features: ["Nirmal Knit", "Mars", "100% Cotton", "Lacoste"],
     specifications: {
       material: "100% Cotton / Cotton Blend",
-      gsm: "140-240-220 GSM",
+      gsm: "140-240 GSM",
       sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
       colors: "20+ Colors Available",
       printing: "Screen Print, DTF, Embroidery",
