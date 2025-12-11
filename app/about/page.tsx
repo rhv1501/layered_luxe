@@ -190,7 +190,7 @@ export default function AboutPage() {
               <div className="aspect-square overflow-hidden rounded-3xl bg-linear-to-br from-surface to-secondary p-6 shadow-2xl border border-surface">
                 <div className="relative h-full w-full overflow-hidden rounded-2xl bg-surface">
                   <Image
-                    src="/logo.png"
+                    src="/about.jpeg"
                     alt="Manufacturing excellence at Layered Luxe"
                     fill
                     style={{ objectFit: "cover" }}

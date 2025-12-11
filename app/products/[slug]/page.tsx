@@ -54,7 +54,12 @@ const productData = {
       printing: "DTF, Screen Print, Sublimation",
       moq: "Minimum 50 pieces",
     },
-    gallery: ["/window.svg", "/window.svg", "/window.svg", "/window.svg"],
+    gallery: [
+      "/roundneck/03.png",
+      "/roundneck/2.png",
+      "/roundneck/01.png",
+      "/roundneck/04.png",
+    ],
   },
   "corporate-shirts-pants": {
     title: "Corporate Uniforms",
@@ -164,6 +169,7 @@ const productData = {
       "/jacket/05.png",
       "/jacket/06.png",
       "/jacket/07.png",
+      "/jacket/Jacket.jpg",
     ],
   },
   // "promotional-tshirts": {
