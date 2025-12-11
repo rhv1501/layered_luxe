@@ -48,7 +48,7 @@ const productData = {
     features: ["Nirmal Knit", "Mars", "100% Cotton", "Lacoste"],
     specifications: {
       material: "Cotton / Polyester Blend",
-      gsm: "140-180 GSM",
+      gsm: "140-240 GSM",
       sizes: "S, M, L, XL, 2XL, 3XL",
       colors: "15+ Colors Available",
       printing: "DTF, Screen Print, Sublimation",
@@ -68,7 +68,7 @@ const productData = {
       "All other bulk speciality uniforms",
     ],
     specifications: {
-      material: "Cotton Blend / Polyester",
+      material: "Cotton Blend",
       gsm: "140-240 GSM",
       sizes: "S, M, L, XL, 2XL, 3XL, 4XL",
       colors: "Corporate Colors Available",
