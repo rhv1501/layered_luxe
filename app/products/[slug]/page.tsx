@@ -45,7 +45,7 @@ const productData = {
     slug: "round-neck-tshirts",
     description:
       "High-quality customised round neck T-shirts for Corporates, event, or promotional use. Soft, breathable fabric with vibrant printing options including screen, DTF, and sublimation. Ideal for brands, startups, and college events.",
-    features: ["Nirmal Knit", "Mars", "100% Cotton", "Lacoste"],
+    features: ["Dot Knit", "Mars", "100% Cotton", "Lacoste"],
     specifications: {
       material: "Cotton / Polyester Blend",
       gsm: "140-240 GSM",
@@ -117,7 +117,7 @@ const productData = {
     specifications: {
       gsm: "140-240",
       sizes: "Age 3-18, Adult S-4XL",
-      printing: "Embroidery, Screen Print, DTF",
+      printing: "Embroidery, Screen Print, DTF, Sublimation",
       moq: "Minimum 50 pieces",
       colours: "All Colors Available",
     },

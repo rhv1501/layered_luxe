@@ -372,6 +372,51 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Product Range Section */}
+        <section className="py-20 bg-background">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-heading text-3xl font-semibold text-text-primary lg:text-4xl">
+                Explore Our Product Range
+              </h2>
+              <p className="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">
+                Discover our premium collection of custom apparel designed for
+                quality, comfort, and style. From corporate uniforms to
+                promotional wear - we deliver unmatched craftsmanship for every
+                need.
+              </p>
+            </div>
+
+            {/* Products Grid */}
+            <ProductsGrid className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12" />
+
+            {/* View All Products CTA */}
+            <div className="text-center">
+              <Link
+                href="/products"
+                className="group inline-flex items-center space-x-3 px-8 py-4 bg-gradient-accent rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                <span className="text-primary font-bold text-lg">
+                  View All Products
+                </span>
+                <svg
+                  className="w-6 h-6 text-primary transform group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Why Manufacture in India Section - Creative & Colorful */}
         <Reveal>
           <section className="py-16 sm:py-24 bg-gradient-to-br from-background via-surface to-background relative overflow-hidden">
@@ -891,51 +936,6 @@ export default function Home() {
           </section>
         </Reveal>
 
-        {/* Product Range Section */}
-        <section className="py-20 bg-background">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-heading text-3xl font-semibold text-text-primary lg:text-4xl">
-                Explore Our Product Range
-              </h2>
-              <p className="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">
-                Discover our premium collection of custom apparel designed for
-                quality, comfort, and style. From corporate uniforms to
-                promotional wear - we deliver unmatched craftsmanship for every
-                need.
-              </p>
-            </div>
-
-            {/* Products Grid */}
-            <ProductsGrid className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12" />
-
-            {/* View All Products CTA */}
-            <div className="text-center">
-              <Link
-                href="/products"
-                className="group inline-flex items-center space-x-3 px-8 py-4 bg-gradient-accent rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              >
-                <span className="text-primary font-bold text-lg">
-                  View All Products
-                </span>
-                <svg
-                  className="w-6 h-6 text-primary transform group-hover:translate-x-1 transition-transform duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* services Section */}
         <Reveal>
           <section className="py-20 bg-surface">
@@ -981,8 +981,8 @@ export default function Home() {
                       </div>
                       <p className="text-text-secondary">
                         Multiple decoration techniques — embroidery, screen
-                        Printing, 3D embossing, sublimation, DTF
-                        printing, and more.
+                        Printing, 3D embossing, sublimation, DTF printing, and
+                        more.
                       </p>
                     </div>
                     <div className="flex items-start space-x-4">
@@ -1122,7 +1122,7 @@ export default function Home() {
                         <div className="absolute inset-0 bg-black/40" />
                         <div className="relative z-10 flex items-center justify-center p-4">
                           <span className="text-sm font-medium text-white text-center">
-                            Wowen Badge Printing
+                            Woven Badge Printing
                           </span>
                         </div>
                       </div>

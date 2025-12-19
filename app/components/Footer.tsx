@@ -149,6 +149,12 @@ export default function Footer() {
               >
                 +91-90870-95955
               </a>
+              <a
+                href="tel:+919047999633"
+                className="text-sm text-text-secondary hover:text-text-primary"
+              >
+                +91-90479-99633
+              </a>
               <span className="text-text-secondary/50">|</span>
               <a
                 href="mailto:layeredluxe.vs@gmail.com"
