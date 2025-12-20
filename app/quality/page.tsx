@@ -23,8 +23,8 @@ export default function QualityPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-          <section>
+        <div className="flex justify-center gap-12 max-w-4xl mx-auto flex-col md:flex-row align-center md:items-start mb-20 space-y-12 md:space-y-0">
+          {/* <section>
             <h2 className="font-heading text-2xl font-bold text-text-primary mb-3">
               Premium Fabric Partners
             </h2>
@@ -97,7 +97,7 @@ export default function QualityPage() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section>
             <h2 className="font-heading text-2xl font-bold text-text-primary mb-3">

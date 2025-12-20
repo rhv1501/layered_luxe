@@ -33,9 +33,9 @@ const productData = {
       moq: "Minimum 50 pieces",
     },
     gallery: [
-      "/poloneck/01.jpg",
-      "/poloneck/02.png",
-      "/poloneck/03.png",
+      "/poloneck/01.jpeg",
+      "/poloneck/02.jpeg",
+      "/poloneck/03.jpeg",
       "/poloneck/04.png",
       "/poloneck/05.png",
     ],
@@ -55,9 +55,9 @@ const productData = {
       moq: "Minimum 50 pieces",
     },
     gallery: [
+      "/roundneck/01.jpeg",
+      "/roundneck/02.jpeg",
       "/roundneck/03.png",
-      "/roundneck/2.png",
-      "/roundneck/01.png",
       "/roundneck/04.png",
     ],
   },
@@ -81,6 +81,7 @@ const productData = {
       moq: "Minimum 50 pieces",
     },
     gallery: [
+      "/shirtpant/01.jpeg",
       "/shirtpant/01.png",
       "/shirtpant/02.png",
       "/shirtpant/03.png",
@@ -121,7 +122,7 @@ const productData = {
       moq: "Minimum 50 pieces",
       colours: "All Colors Available",
     },
-    gallery: ["/uniform/03.png", "/uniform/02.png", "/uniform/01.png"],
+    gallery: ["/uniform/01.jpeg", "/uniform/02.jpeg", "/uniform/03.jpeg","/uniform/04.jpeg"],
   },
   jerseys: {
     title: "Custom Jerseys",
@@ -146,7 +147,7 @@ const productData = {
       printing: "Sublimation, Heat Press",
       moq: "Minimum 50 pieces",
     },
-    gallery: ["/Jersey/02.png", "/Jersey/01.png", "/Jersey/03.png"],
+    gallery: ["/Jersey/02.jpeg","/Jersey/02.png", "/Jersey/01.png", "/Jersey/03.png"],
   },
   "custom-hoodies-jackets": {
     title: "Customised Hoodies & Jackets",
@@ -163,6 +164,7 @@ const productData = {
       moq: "Minimum 50 pieces",
     },
     gallery: [
+      "/jacket/01.jpeg",
       "/jacket/02.png",
       "/jacket/03.png",
       "/jacket/04.png",

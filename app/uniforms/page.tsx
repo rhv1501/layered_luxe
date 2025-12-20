@@ -32,7 +32,7 @@ export default function UniformsPage() {
       subtitle: "Corporate Attire",
       description:
         "Professional shirts, trousers, ties, and accessories for a polished corporate image.",
-      image: "/corporate.png",
+      image: "/shirtpant/01.jpeg",
       href: "/products/polo-neck-tshirts",
     },
     {
@@ -41,7 +41,7 @@ export default function UniformsPage() {
       subtitle: "School Uniforms",
       description:
         "Durable and comfortable school uniforms that foster pride and unity among students.",
-      image: "/schooluniforms.png",
+      image: "/uniform/01.jpeg",
       href: "/products/school-uniforms",
     },
     // {
