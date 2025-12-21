@@ -684,7 +684,7 @@ export default function Home() {
                     <div className="relative">
                       <div className="aspect-square rounded-3xl overflow-hidden bg-white shadow-2xl border border-gray-200">
                         <Image
-                          src="/02.jpeg"
+                          src="/unleash.jpeg"
                           alt="Premium Quality Uniforms Manufacturing - Layered Luxe"
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -712,7 +712,7 @@ export default function Home() {
                         </div>
 
                         {/* Manufacturing Excellence Badge */}
-                        <div className="absolute bottom-6 right-6">
+                        <div className="absolute -bottom-12 right-6">
                           <div className="bg-teal text-white rounded-xl p-3 shadow-lg">
                             <div className="text-center">
                               <div className="text-lg font-bold">100%</div>

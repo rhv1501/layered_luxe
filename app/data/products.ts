@@ -21,7 +21,7 @@ export const productsData: Product[] = [
     slug: "polo-neck-tshirts",
     image: "/poloneck/01.jpeg",
     description:
-      "Premium-quality customised polo neck T-shirts designed for men. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
+      "Premium-quality customised polo neck T-shirts designed for men and women. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
     features: [
       "100% Cotton",
       "Custom Branding",
