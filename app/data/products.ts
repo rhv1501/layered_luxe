@@ -5,7 +5,7 @@ export const productsData: Product[] = [
   id: "School Uniforms",
   title: "Customised School Uniforms",
   slug: "school-uniforms",
-  image: "/uniform/01.jpeg",
+  image: "/uniform/01.jpg",
   description:
     "Premium-quality school uniforms tailored for comfort, durability, and a smart appearance. Perfect for schools, academies, and institutions seeking custom-designed shirts, pants, skirts, and sportswear. Available with embroidery or logo printing for a professional identity.",
   features: [
@@ -19,7 +19,7 @@ export const productsData: Product[] = [
     id: "Customised polo neck tees",
     title: "Customised Polo Neck T-Shirts",
     slug: "polo-neck-tshirts",
-    image: "/poloneck/01.jpeg",
+    image: "/poloneck/01.png",
     description:
       "Premium-quality customised polo neck T-shirts designed for men and women. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
     features: [
@@ -33,7 +33,7 @@ export const productsData: Product[] = [
     id: "Customised round neck tees",
     title: "Customised Round Neck T-Shirts",
     slug: "round-neck-tshirts",
-    image: "/roundneck/01.jpeg",
+    image: "/roundneck/01.png",
     description:
       "High-quality customised round neck T-shirts for casual, event, or promotional use. Soft, breathable fabric with vibrant printing options including screen, DTF, and sublimation. Ideal for brands, startups, and college events.",
     features: [
@@ -47,7 +47,7 @@ export const productsData: Product[] = [
     id: "corporate shirts and pants",
     title: "Corporate Uniforms – Shirts & Pants",
     slug: "corporate-shirts-pants",
-    image: "/shirtpant/01.jpeg",
+    image: "/shirtpant/01.png",
     description:
       "Professional corporate shirts and pants tailored for comfort and style. Perfect for offices, hospitality, and formal workwear. Available in multiple fits, colors, and branding options for a polished team look.",
     features: [
@@ -62,7 +62,7 @@ export const productsData: Product[] = [
     id: "jerseys",
     title: "Custom Jerseys",
     slug: "jerseys",
-    image: "/Jersey/02.jpeg",
+    image: "/Jersey/01.png",
     description:
       "Personalised sports jerseys crafted for teams, tournaments, and fitness events. Choose from Dri-FIT, mesh, or polyester materials with full sublimation printing. Add names, numbers, and logos to showcase your team spirit.",
     features: [
@@ -76,7 +76,7 @@ export const productsData: Product[] = [
     id: "Hoodies and Jackets",
     title: "Custom Hoodies & Jackets",
     slug: "custom-hoodies-jackets",
-    image: "/jacket/01.jpeg",
+    image: "/jacket/01.png",
     description:
       "Stay warm in style with customised hoodies and jackets. Perfect for corporate gifting, winter campaigns, and team branding. Available in cotton fleece, polyester, and zipper styles with embroidered or printed logos.",
     features: [

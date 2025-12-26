@@ -33,11 +33,10 @@ const productData = {
       moq: "Minimum 50 pieces",
     },
     gallery: [
-      "/poloneck/01.jpeg",
-      "/poloneck/02.jpeg",
-      "/poloneck/03.jpeg",
+      "/poloneck/01.png",
+      "/poloneck/02.png",
+      "/poloneck/03.png",
       "/poloneck/04.png",
-      "/poloneck/05.png",
     ],
   },
   "round-neck-tshirts": {
@@ -55,8 +54,8 @@ const productData = {
       moq: "Minimum 50 pieces",
     },
     gallery: [
-      "/roundneck/01.jpeg",
-      "/roundneck/02.jpeg",
+      "/roundneck/01.png",
+      "/roundneck/02.jpg",
       "/roundneck/03.png",
       "/roundneck/04.png",
     ],
@@ -80,13 +79,7 @@ const productData = {
       printing: "Embroidery, Heat Transfer",
       moq: "Minimum 50 pieces",
     },
-    gallery: [
-      "/shirtpant/01.jpeg",
-      "/shirtpant/01.png",
-      "/shirtpant/02.png",
-      "/shirtpant/03.png",
-      "/shirtpant/04.png",
-    ],
+    gallery: ["/shirtpant/01.png", "/shirtpant/03.png", "/shirtpant/04.png"],
   },
   "school-uniforms": {
     title: "Custom School Uniforms",
@@ -122,7 +115,13 @@ const productData = {
       moq: "Minimum 50 pieces",
       colours: "All Colors Available",
     },
-    gallery: ["/uniform/01.jpeg", "/uniform/02.jpeg", "/uniform/03.jpeg","/uniform/04.jpeg"],
+    gallery: [
+      "/uniform/01.jpg",
+      "/uniform/02.png",
+      "/uniform/03.png",
+      "/uniform/04.png",
+      "/uniform/05.png",
+    ],
   },
   jerseys: {
     title: "Custom Jerseys",
@@ -147,7 +146,13 @@ const productData = {
       printing: "Sublimation, Heat Press",
       moq: "Minimum 50 pieces",
     },
-    gallery: ["/Jersey/02.jpeg","/Jersey/02.png", "/Jersey/01.png", "/Jersey/03.png"],
+    gallery: [
+      "/Jersey/01.png",
+      "/Jersey/02.png",
+      "/Jersey/03.png",
+      "/Jersey/04.png",
+      "/Jersey/05.png",
+    ],
   },
   "custom-hoodies-jackets": {
     title: "Customised Hoodies & Jackets",
@@ -164,14 +169,11 @@ const productData = {
       moq: "Minimum 50 pieces",
     },
     gallery: [
-      "/jacket/01.jpeg",
+      "/jacket/01.png",
       "/jacket/02.png",
       "/jacket/03.png",
       "/jacket/04.png",
-      "/jacket/05.png",
-      "/jacket/06.png",
-      "/jacket/07.png",
-      "/jacket/Jacket.jpg",
+      "/jacket/05.jpg",
     ],
   },
   // "promotional-tshirts": {

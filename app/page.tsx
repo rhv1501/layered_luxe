@@ -218,7 +218,7 @@ export default function Home() {
                         <div className="bg-white p-4 sm:p-6 rounded-3xl shadow-2xl transform -rotate-1 hover:rotate-0 transition-all duration-700">
                           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                             <Image
-                              src="/01.jpeg"
+                              src="/unleash.png"
                               alt="Layered Luxe Premium Poster"
                               fill
                               className="object-contain transition-transform duration-500 hover:scale-105"
@@ -334,7 +334,7 @@ export default function Home() {
                       <div className="bg-white p-6 rounded-3xl shadow-2xl transform -rotate-2 hover:rotate-0 transition-all duration-500 hover:scale-105">
                         <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-50">
                           <Image
-                            src="/01.jpeg"
+                            src="/unleash.png"
                             alt="Layered Luxe Quality Poster"
                             fill
                             className="object-contain"
@@ -684,7 +684,7 @@ export default function Home() {
                     <div className="relative">
                       <div className="aspect-square rounded-3xl overflow-hidden bg-white shadow-2xl border border-gray-200">
                         <Image
-                          src="/unleash.jpeg"
+                          src="/02.jpeg"
                           alt="Premium Quality Uniforms Manufacturing - Layered Luxe"
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
