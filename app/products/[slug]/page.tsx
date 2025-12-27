@@ -19,7 +19,7 @@ export async function generateMetadata({
 
 const productData = {
   "polo-neck-tshirts": {
-    title: "Corporate T shirts",
+    title: "Corporate polo neck T shirts",
     slug: "polo-neck-tshirts",
     description:
       "Premium-quality customised polo neck T-shirts designed for men and women. Perfect for corporate wear, sports teams, and events. Durable fabric, elegant fit, and logo personalization options to match your brand identity.",
@@ -53,12 +53,7 @@ const productData = {
       printing: "DTF, Screen Print, Sublimation",
       moq: "Minimum 50 pieces",
     },
-    gallery: [
-      "/roundneck/01.png",
-      "/roundneck/02.jpg",
-      "/roundneck/03.png",
-      "/roundneck/04.png",
-    ],
+    gallery: ["/roundneck/01.png", "/roundneck/02.jpg", "/roundneck/03.png"],
   },
   "corporate-shirts-pants": {
     title: "Corporate Uniforms",

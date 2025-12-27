@@ -96,7 +96,7 @@ export default function Navigation() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/layeredluxe_by_vs"
+                href="https://www.instagram.com/layeredluxe_vs/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-1 hover:text-primary/80 transition-colors "
@@ -175,7 +175,7 @@ export default function Navigation() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/layeredluxe_by_vs"
+                href="https://www.instagram.com/layeredluxe_vs/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-1 hover:text-primary/80 transition-colors scale-130"
