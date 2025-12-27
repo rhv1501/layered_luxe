@@ -29,12 +29,12 @@ const UniformsGrid: React.FC<UniformsGridProps> = ({ uniformSolutions }) => {
               alt={uniform.title}
               fill
               style={{ objectFit: "cover" }}
-              className="group-hover:scale-110 transition-transform duration-300 opacity-20"
+              className="group-hover:scale-110 transition-transform duration-300"
             />
             {/* Category overlay for placeholder */}
             <div className="absolute inset-0 flex items-center justify-center bg-accent/10">
               <div className="text-center p-8">
-                <div className="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                {/* <div className="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <svg
                     className="w-8 h-8 text-accent"
                     fill="none"
@@ -48,10 +48,10 @@ const UniformsGrid: React.FC<UniformsGridProps> = ({ uniformSolutions }) => {
                       d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                     />
                   </svg>
-                </div>
-                <span className="text-sm text-text-secondary font-medium">
+                </div> */}
+                {/* <span className="text-sm text-text-secondary font-medium">
                   {uniform.title}
-                </span>
+                </span> */}
               </div>
             </div>
             <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />

@@ -684,7 +684,7 @@ export default function Home() {
                     <div className="relative">
                       <div className="aspect-square rounded-3xl overflow-hidden bg-white shadow-2xl border border-gray-200">
                         <Image
-                          src="/02.jpeg"
+                          src="/unleash.jpeg"
                           alt="Premium Quality Uniforms Manufacturing - Layered Luxe"
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
